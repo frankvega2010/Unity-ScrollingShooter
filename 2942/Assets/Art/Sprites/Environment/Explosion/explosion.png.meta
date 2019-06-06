@@ -1,18 +1,12 @@
 fileFormatVersion: 2
-guid: 2dbfaa43a964f7a489316943d4d91e34
+guid: 8ca05c81ed3f02e488957f0dc86f098c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ship_0
-    21300002: ship_1
-    21300004: ship_2
-    21300006: ship_3
-    21300008: ship_4
-    21300010: ship_5
-    21300012: ship_6
-    21300014: ship_7
-    21300016: ship_8
-    21300018: ship_9
-    21300020: ship_10
+    21300000: explosion_0
+    21300002: explosion_1
+    21300004: explosion_2
+    21300006: explosion_3
+    21300008: explosion_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -31,7 +25,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -52,12 +46,12 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 5
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
-  spriteBorder: {x: 2, y: 24, z: 66, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -95,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ship_0
+      name: explosion_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 24
-        width: 12
-        height: 24
+        x: 3
+        y: 5
+        width: 8
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d2891681cbfefb4a89fe41d8ec2e4fd
+      spriteID: 100ef03cfc25e584cbfabd5140c293ed
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_1
+      name: explosion_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 12
-        height: 24
+        x: 18
+        y: 3
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,59 +123,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cfe60cbc2c4c384ca5530fd018ffd85
+      spriteID: 4e6e5913824f51a43b9775d04815a1ef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_2
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 24
-        width: 14
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92051cc082063644481ef4c512551df5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_3
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 0
-        width: 14
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d61291bca8a1a9344833537935354b11
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_4
+      name: explosion_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 24
+        y: 2
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53705d93298e9c14cbda980f8691e293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1
         width: 16
-        height: 24
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,39 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab07ed666ae327547882a473ab1f7105
+      spriteID: 39f3b41328e4bc545b1b0021b75e6e43
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_5
+      name: explosion_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d91debc3fb98684895f271bc0fd01be
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_6
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 24
+        x: 65
+        y: 1
         width: 14
-        height: 24
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,67 +183,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28ee85548ae249c4b817fac5c782901c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_7
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 0
-        width: 14
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 026fe9e9ee4c13d4b9749fdef8100125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_8
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 24
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eda54736fd0af240a709635dba809b1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_9
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0175b5a7f14b0c248ae395e731846337
+      spriteID: 45624160c97fd3a49b38a0b923af384e
       vertices: []
       indices: 
       edges: []
@@ -297,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 258f8f16a77904a4f9d23a1c1675a9d6
+    spriteID: 4dcb8b2f8c932144790a27c633f58fc0
     vertices: []
     indices: 
     edges: []

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speed;
+
     private Animator playerAnimator;
 
     // Start is called before the first frame update
@@ -29,13 +31,13 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("movingRight",true);
             playerAnimator.SetBool("movingLeft", false);
-            transform.position = transform.position + new Vector3(1,0,0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(speed, 0,0) * Time.deltaTime;
         }
         else if (xAxis < 0)
         {
             playerAnimator.SetBool("movingRight", false);
             playerAnimator.SetBool("movingLeft", true);
-            transform.position = transform.position + new Vector3(-1, 0, 0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(-speed, 0, 0) * Time.deltaTime;
         }
         else
         {
@@ -45,11 +47,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(yAxis > 0)
         {
-            transform.position = transform.position + new Vector3(0, 1, 0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(0, speed, 0) * Time.deltaTime;
         }
         else if (yAxis < 0)
         {
-            transform.position = transform.position + new Vector3(0, -1, 0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(0, -speed, 0) * Time.deltaTime;
         }
 
         
