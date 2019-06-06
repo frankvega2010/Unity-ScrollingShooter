@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public delegate void onPlayerAction();
+    public static onPlayerAction onPlayerDeath;
+
     public GameObject LaserGun;
     public GameObject FirestormX;
     public int energy;
     public int FirestormXCharge;
+    public float energyDrainRate;
 
     private SpriteRenderer playerRenderer;
     private LaserGun playerLaserGun;
     private FirestormX playerFirestormX;
+    private float energyDrainTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        energyDrainTimer += Time.deltaTime;
+
         if(Input.GetKey(KeyCode.F))
         {
             playerLaserGun.Shoot();
@@ -37,6 +44,17 @@ public class PlayerController : MonoBehaviour
                 playerFirestormX.Shoot();
             }
         }
+
+        if(energyDrainTimer >= energyDrainRate)
+        {
+            energyDrainTimer = 0;
+            energy--;
+        }
+
+        if(energy <= 0)
+        {
+            playerDie();
+        }
     }
 
     public void substractEnergy()
@@ -49,5 +67,13 @@ public class PlayerController : MonoBehaviour
     private void switchColorBack()
     {
         playerRenderer.material.color = Color.white;
+    }
+
+    private void playerDie()
+    {
+        if(onPlayerDeath != null)
+        {
+            onPlayerDeath();
+        }
     }
 }

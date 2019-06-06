@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 2141474170}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1058,8 +1058,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserGun: {fileID: 473287143}
   FirestormX: {fileID: 176267525}
-  energy: 0
+  energy: 100
   FirestormXCharge: 100
+  energyDrainRate: 2.5
 --- !u!60 &2141474168
 PolygonCollider2D:
   m_ObjectHideFlags: 0
