@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 111367657}
   m_Layer: 0
   m_Name: EnemyTest
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,16 +220,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.013932284, y: 0.08102581}
-      - {x: -0.031140383, y: 0.032360047}
-      - {x: -0.08043057, y: 0.02987358}
-      - {x: -0.07984406, y: -0.059111625}
-      - {x: -0.020335253, y: -0.080295116}
-      - {x: 0.020140592, y: -0.08007434}
-      - {x: 0.07952541, y: -0.062078506}
-      - {x: 0.08024973, y: 0.0319452}
-      - {x: 0.033670608, y: 0.033819884}
-      - {x: 0.0075232424, y: 0.08048174}
+    - - {x: -0.01120263, y: 0.04571271}
+      - {x: -0.021570262, y: 0.02134037}
+      - {x: -0.053719338, y: 0.020985603}
+      - {x: -0.054502066, y: -0.04015255}
+      - {x: -0.017847117, y: -0.05298519}
+      - {x: 0.01639432, y: -0.053636074}
+      - {x: 0.055483285, y: -0.038865805}
+      - {x: 0.05464572, y: 0.024018288}
+      - {x: 0.022630397, y: 0.024378777}
+      - {x: 0.0067104734, y: 0.045916796}
 --- !u!50 &111367655
 Rigidbody2D:
   serializedVersion: 4
@@ -424,7 +424,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  smoothSpeed: 10.5
   maxLifespan: 20
+  maxTimeForward: 0.1
   target: {fileID: 111367651}
 --- !u!95 &221602096
 Animator:
@@ -936,6 +938,9 @@ GameObject:
   - component: {fileID: 2141474165}
   - component: {fileID: 2141474167}
   - component: {fileID: 2141474166}
+  - component: {fileID: 2141474169}
+  - component: {fileID: 2141474168}
+  - component: {fileID: 2141474170}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -1053,4 +1058,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserGun: {fileID: 473287143}
   FirestormX: {fileID: 176267525}
+  energy: 0
   FirestormXCharge: 100
+--- !u!60 &2141474168
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141474162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.08, y: 0.16}
+    newSize: {x: 0.12, y: 0.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.009749651, y: -0.08002782}
+      - {x: 0.015850782, y: -0.07946634}
+      - {x: 0.038154125, y: -0.05202365}
+      - {x: 0.039303303, y: 0.052425623}
+      - {x: 0.014585972, y: 0.07883668}
+      - {x: -0.012406826, y: 0.07929802}
+      - {x: -0.040305138, y: 0.045521498}
+      - {x: -0.037171125, y: -0.05279541}
+--- !u!50 &2141474169
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141474162}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &2141474170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141474162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad2679814d24094c88c86c077f8dd47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,6 +6,7 @@ public class BackgroundMoving : MonoBehaviour
 {
     public float speed;
 
+    private float timeBackground;
     MeshRenderer backgroundRenderer;
     private void Start()
     {
@@ -15,6 +16,7 @@ public class BackgroundMoving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        backgroundRenderer.material.mainTextureOffset = new Vector2(Time.time * speed, 0);
+        timeBackground += Time.deltaTime;
+        backgroundRenderer.material.mainTextureOffset = new Vector2(timeBackground * speed, 0);
     }
 }

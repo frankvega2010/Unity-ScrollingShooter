@@ -35,6 +35,13 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.SetBool("hasHit", true);
+        switch (collision.gameObject.tag)
+        {
+            case "Player":
+                break;
+            default:
+                animator.SetBool("hasHit", true);
+                break;
+        }
     }
 }

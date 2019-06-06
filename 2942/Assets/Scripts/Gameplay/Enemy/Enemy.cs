@@ -79,6 +79,9 @@ public class Enemy : MonoBehaviour
             case "bounds":
                 Destroy(this.gameObject);
                 break;
+            case "Player":
+                hitEnemy();
+                break;
             default:
                 break;
         }
