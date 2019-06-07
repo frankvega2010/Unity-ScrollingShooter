@@ -6,6 +6,8 @@ public class LaserGun : MonoBehaviour
 {
     public GameObject bulletInstance;
     public float fireRate;
+    public bool isBot;
+    public GameObject target;
 
     private bool isFiring;
     private float fireRateTimer;
@@ -31,6 +33,15 @@ public class LaserGun : MonoBehaviour
             GameObject bullet = Instantiate(bulletInstance, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
             bullet.transform.position = GetComponent<Transform>().position;
             bullet.SetActive(true);
+
+            if(isBot)
+            {
+                if(target != null)
+                {
+                    Bullet bulletComponent = bullet.GetComponent<Bullet>();
+                    bulletComponent.target = target;
+                }
+            }
         }
     }
 }

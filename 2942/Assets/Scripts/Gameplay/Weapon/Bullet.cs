@@ -6,10 +6,13 @@ public class Bullet : MonoBehaviour
 {
     public int speed;
     public float maxLifespan;
+    public GameObject target;
 
     private Animator animator;
     private float lifespan;
     private Rigidbody rig;
+    private bool setTargetOnce;
+    private Vector3 dir;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +32,40 @@ public class Bullet : MonoBehaviour
 
         if (!animator.GetBool("hasHit"))
         {
-            transform.position = transform.position + new Vector3(0, speed, 0) * Time.deltaTime;
+            if(target != null)
+            {
+                if (!setTargetOnce)
+                {
+                    dir = transform.position - target.transform.position;
+                    dir.Normalize();
+
+                    Quaternion q01 = Quaternion.LookRotation(transform.position - target.transform.position, transform.forward);
+                    q01.x = 0;
+                    q01.y = 0;
+                    transform.rotation = q01;
+                    setTargetOnce = true;
+                }
+
+                transform.position = transform.position - dir * speed * Time.deltaTime; 
+            }
+            else
+            {
+                transform.position = transform.position + new Vector3(0, speed, 0) * Time.deltaTime;
+            }
+            
         } 
+    }
+
+    private bool isPlayerBeingTarget()
+    {
+        if (target != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +73,18 @@ public class Bullet : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
+                if (isPlayerBeingTarget())
+                {
+                    animator.SetBool("hasHit", true);
+                }
+                break;
+            case "bounds":
+                break;
+            case "enemy":
+                if (!isPlayerBeingTarget())
+                {
+                    animator.SetBool("hasHit", true);
+                }
                 break;
             default:
                 animator.SetBool("hasHit", true);

@@ -11,17 +11,25 @@ public class Enemy : MonoBehaviour
         maxStates
     }
 
-
+    
     public int lives;
     public Vector3 speed;
     public enemyStates currentState;
+    public GameObject LaserGun;
+    public float fireRateMin;
+    public float fireRateMax;
 
+    private LaserGun enemyLaserGun;
     private Animator animator;
     private SpriteRenderer enemyRenderer;
+    private float fireRate;
+    private float fireRateTimer;
+    private bool doOnce;
     private void Start()
     {
         animator = GetComponent<Animator>();
         enemyRenderer = GetComponent<SpriteRenderer>();
+        enemyLaserGun = LaserGun.GetComponent<LaserGun>();
     }
 
     private void Update()
@@ -29,7 +37,10 @@ public class Enemy : MonoBehaviour
         switch (currentState)
         {
             case enemyStates.moving:
+                resetFireRate();
+                fireRateTimer += Time.deltaTime;
                 move();
+                shoot();
                 break;
             case enemyStates.dead:
                 die();
@@ -58,6 +69,25 @@ public class Enemy : MonoBehaviour
         transform.position = transform.position + speed * Time.deltaTime;
     }
 
+    private void resetFireRate()
+    {
+        if (!doOnce)
+        {
+            fireRate = Random.Range(fireRateMin, fireRateMax);
+            doOnce = true;
+        }
+    }
+
+    private void shoot()
+    {
+        if (fireRateTimer >= fireRate)
+        {
+            enemyLaserGun.Shoot();
+            doOnce = false;
+            fireRateTimer = 0;
+        }
+    }
+
     private void die()
     {
         animator.SetBool("isDead", true);
@@ -69,12 +99,31 @@ public class Enemy : MonoBehaviour
         enemyRenderer.material.color = Color.white;
     }
 
+    private bool isEnemyBeingTarget(Bullet currentBullet)
+    {
+        if (currentBullet.target == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
         {
             case "bullet":
-                hitEnemy();
+                Bullet currentBullet = collision.gameObject.GetComponent<Bullet>();
+                if(isEnemyBeingTarget(currentBullet))
+                {
+                    hitEnemy();
+                }
+                break;
+            case "homingbullet":
+                    hitEnemy();
                 break;
             case "Player":
                 hitEnemy();
