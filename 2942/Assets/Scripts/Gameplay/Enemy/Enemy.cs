@@ -76,14 +76,24 @@ public class Enemy : MonoBehaviour
             case "bullet":
                 hitEnemy();
                 break;
-            case "bounds":
-                Destroy(this.gameObject);
-                break;
             case "Player":
                 hitEnemy();
                 break;
             default:
                 break;
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "bounds":
+                Destroy(this.gameObject);
+                break;
+            default:
+                break;
+        }
+        
     }
 }
