@@ -7,21 +7,35 @@ public class PlayerController : MonoBehaviour
     public delegate void onPlayerAction();
     public static onPlayerAction onPlayerDeath;
 
-    public GameObject LaserGun;
-    public GameObject FirestormX;
+    public List<GameObject> laserGuns;
+    public GameObject firestormX;
     public int energy;
-    public int FirestormXCharge;
+    public int firestormXCharge;
     public float energyDrainRate;
+    public float newPositionDifference;
 
+    public float duplicateCount;
+    private int newPositionDirection;
+    private float constantNewPositionDifference;
     private SpriteRenderer playerRenderer;
-    private LaserGun playerLaserGun;
+    public List<LaserGun> playerLaserGuns;
+    private LaserGun laserGunTemplate;
     private FirestormX playerFirestormX;
     private float energyDrainTimer;
+    public int spawnCount;
     // Start is called before the first frame update
     void Start()
     {
-        playerLaserGun = LaserGun.GetComponent<LaserGun>();
-        playerFirestormX = FirestormX.GetComponent<FirestormX>();
+        foreach (GameObject LaserGun in laserGuns)
+        {
+            playerLaserGuns.Add(LaserGun.GetComponent<LaserGun>());
+            laserGunTemplate = LaserGun.GetComponent<LaserGun>();
+        }
+        newPositionDirection = 1;
+        duplicateCount = 1;
+        spawnCount = 0;
+        constantNewPositionDifference = newPositionDifference;
+        playerFirestormX = firestormX.GetComponent<FirestormX>();
         PlayerCollision.onEnemyHit = substractEnergy;
         playerRenderer = GetComponent<SpriteRenderer>();
     }
@@ -33,14 +47,25 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.F))
         {
-            playerLaserGun.Shoot();
+            foreach (LaserGun LaserGun in playerLaserGuns)
+            {
+                LaserGun.Shoot();
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha1)) // DEBUG
+        {
+            if(playerLaserGuns.Count < 5)
+            {
+                addCannon();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(FirestormXCharge >= 100)
+            if(firestormXCharge >= 100)
             {
-                FirestormXCharge = 0;
+                firestormXCharge = 0;
                 playerFirestormX.Shoot();
             }
         }
@@ -75,5 +100,33 @@ public class PlayerController : MonoBehaviour
         {
             onPlayerDeath();
         }
+    }
+
+    private void addCannon()
+    {
+        LaserGun laserGunInstance = Instantiate(laserGunTemplate);
+        laserGunInstance.transform.SetParent(gameObject.transform);
+        laserGunInstance.transform.localPosition = Vector3.zero;
+        spawnCount++;
+        newPositionDirection = newPositionDirection * -1;
+        laserGunInstance.transform.localPosition = laserGunInstance.transform.localPosition + (new Vector3(constantNewPositionDifference, 0,0) * newPositionDirection); // direction 1 or -1
+        playerLaserGuns.Add(laserGunInstance);
+
+        if (isSpawnCountPair())
+        {
+            duplicateCount++;
+            constantNewPositionDifference = newPositionDifference * duplicateCount;
+            spawnCount = 0;
+        }
+
+    }
+
+    private bool isSpawnCountPair()
+    {
+        if(spawnCount % 2 == 0 && spawnCount != 0)
+        {
+            return true;
+        }
+        return false;
     }
 }

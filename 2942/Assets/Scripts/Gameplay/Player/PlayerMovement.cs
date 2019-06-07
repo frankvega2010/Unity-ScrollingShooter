@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        PlayerController.onPlayerDeath += DisableMovement;
     }
 
     // Update is called once per frame
@@ -24,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x,0.02f,0.98f);
         pos.y = Mathf.Clamp(pos.y, 0.08f, 0.92f);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
-        //Debug.Log(pos);
         
 
         if(xAxis > 0)
@@ -55,5 +55,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         
+    }
+
+    private void DisableMovement()
+    {
+        enabled = false;
     }
 }
