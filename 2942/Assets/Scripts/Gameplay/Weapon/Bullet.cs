@@ -100,11 +100,5 @@ public class Bullet : MonoBehaviour
         {
             animator.SetBool("hasHit", true);
         }
-        //switch (collision.gameObject.tag)
-        //{
-        //    case "bounds":
-        //        animator.SetBool("hasHit", true);
-        //        break;
-        //}
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public delegate void onEnemyAction(GameObject Enemy);
+    public static onEnemyAction onEnemyDeath;
+
     public enum enemyStates
     {
         moving,
@@ -18,8 +21,11 @@ public class Enemy : MonoBehaviour
     public float fireRateMin;
     public float fireRateMax;
     public bool hasWaypoints;
-    public bool isParent;
     public List<GameObject> lootPool;
+
+    [Header("Squad")]
+    public bool isParent;
+    public List<GameObject> squadMembers;
 
     private LaserGun enemyLaserGun;
     private Animator animator;
@@ -35,6 +41,10 @@ public class Enemy : MonoBehaviour
             animator = GetComponent<Animator>();
             enemyRenderer = GetComponent<SpriteRenderer>();
             enemyLaserGun = LaserGun.GetComponent<LaserGun>();
+        }
+        else
+        {
+            onEnemyDeath = deleteEnemyFromSquad;
         }
     }
 
@@ -100,12 +110,29 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void deleteEnemyFromSquad(GameObject enemy)
+    {
+        if(isParent)
+        {
+            squadMembers.Remove(enemy);
+            if(squadMembers.Count <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     private void die()
     {
         if(!dropItemOnce)
         {
             dropRandomItem();
             dropItemOnce = true;
+
+            if(onEnemyDeath != null)
+            {
+                onEnemyDeath(this.gameObject);
+            }
         }
         animator.SetBool("isDead", true);
         Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);

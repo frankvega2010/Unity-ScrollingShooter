@@ -301,10 +301,11 @@ MonoBehaviour:
   fireRateMin: 0.5
   fireRateMax: 1
   hasWaypoints: 1
-  isParent: 0
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
+  isParent: 0
+  squadMembers: []
 --- !u!95 &111367657
 Animator:
   serializedVersion: 3
@@ -419,10 +420,11 @@ MonoBehaviour:
   fireRateMin: 0.5
   fireRateMax: 1
   hasWaypoints: 1
-  isParent: 0
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
+  isParent: 0
+  squadMembers: []
 --- !u!60 &130283793
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -506,6 +508,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &166088916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166088917}
+  m_Layer: 0
+  m_Name: Proyectiles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &166088917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166088916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026293516, y: -0.27198792, z: -0.6271842}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 908343840}
+  - {fileID: 221602092}
+  m_Father: {fileID: 1842531789}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176267525
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,12 +612,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221602091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.336, y: 0, z: -0.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3097064, y: 0.27198792, z: 0.027184188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1842531789}
-  m_RootOrder: 2
+  m_Father: {fileID: 166088917}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &221602093
 BoxCollider2D:
@@ -716,6 +750,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &241613351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241613352}
+  m_Layer: 0
+  m_Name: Stage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &241613352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241613351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6785622, y: 2.0191193, z: 0.053710938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1742048790}
+  - {fileID: 1077017922}
+  - {fileID: 534669905}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249623561
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +843,7 @@ Transform:
   - {fileID: 1920278296}
   - {fileID: 1894867696}
   m_Father: {fileID: 1842531789}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &401764701
 GameObject:
@@ -957,7 +1024,7 @@ GameObject:
   - component: {fileID: 479016192}
   - component: {fileID: 479016191}
   m_Layer: 0
-  m_Name: WaypointGroup1
+  m_Name: Squad1Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,7 +1070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479016190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27407384, y: 0.40807366, z: -1.235507}
+  m_LocalPosition: {x: -0.9516156, y: 0.8625684, z: -0.61467046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1738652945}
@@ -1022,8 +1089,8 @@ Transform:
   - {fileID: 713095076}
   - {fileID: 81269137}
   - {fileID: 249623562}
-  m_Father: {fileID: 1842531789}
-  m_RootOrder: 5
+  m_Father: {fileID: 1481316959}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488058429
 GameObject:
@@ -1130,12 +1197,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.03, y: 2.18, z: -0.968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6485622, y: 0.1608808, z: -1.0217109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 241613352}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713095075
 GameObject:
@@ -1370,10 +1437,11 @@ MonoBehaviour:
   fireRateMin: 0.5
   fireRateMax: 1
   hasWaypoints: 1
-  isParent: 0
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
+  isParent: 0
+  squadMembers: []
 --- !u!60 &896762658
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1534,11 +1602,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908343838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.049979687, y: -0.279, z: -0.6745475}
+  m_LocalPosition: {x: 0.02368617, y: -0.007012129, z: -0.04736328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1842531789}
-  m_RootOrder: 1
+  m_Father: {fileID: 166088917}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &908343841
 Animator:
@@ -1786,10 +1854,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077017918}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 3.08, y: 2.05, z: 0.21}
+  m_LocalPosition: {x: -0.59856224, y: 0.03088069, z: 0.15628906}
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 241613352}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &1077017923
@@ -1864,6 +1932,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 479016192}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1481316958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481316959}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1481316959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481316958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.67754173, y: -0.4544947, z: -0.62083656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1539929883}
+  - {fileID: 479016192}
+  m_Father: {fileID: 1842531789}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481532598
 GameObject:
@@ -1968,15 +2068,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539929882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.124872684, y: 0.072, z: -0.6242545}
+  m_LocalPosition: {x: -0.55266905, y: 0.52649474, z: -0.0034179688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 111367652}
   - {fileID: 1585422433}
   - {fileID: 896762654}
   - {fileID: 130283789}
-  m_Father: {fileID: 1842531789}
-  m_RootOrder: 3
+  m_Father: {fileID: 1481316959}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1539929884
 MonoBehaviour:
@@ -1997,8 +2097,13 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
-  isParent: 1
   lootPool: []
+  isParent: 1
+  squadMembers:
+  - {fileID: 111367651}
+  - {fileID: 1585422432}
+  - {fileID: 896762653}
+  - {fileID: 130283788}
 --- !u!1 &1585422432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,10 +2199,11 @@ MonoBehaviour:
   fireRateMin: 0.5
   fireRateMax: 1
   hasWaypoints: 1
-  isParent: 0
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
+  isParent: 0
+  squadMembers: []
 --- !u!60 &1585422437
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,12 +2467,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742048787}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7131917, y: 2.553499, z: 0.16769063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9653704, y: 0.5343797, z: 0.1139797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 241613352}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842531788
 GameObject:
@@ -2396,13 +2502,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2141474164}
-  - {fileID: 908343840}
-  - {fileID: 221602092}
-  - {fileID: 1539929883}
+  - {fileID: 166088917}
   - {fileID: 342977536}
-  - {fileID: 479016192}
+  - {fileID: 1481316959}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894867695
 GameObject:

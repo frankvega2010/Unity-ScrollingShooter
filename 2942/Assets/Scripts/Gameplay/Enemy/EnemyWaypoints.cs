@@ -84,5 +84,12 @@ public class EnemyWaypoints : MonoBehaviour
                 waypointIndex = 0;
             }
         }
+        else
+        {
+            if(targetAffected == null)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
