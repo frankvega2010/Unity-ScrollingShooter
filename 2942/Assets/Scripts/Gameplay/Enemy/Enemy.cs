@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public delegate void onEnemyAction(GameObject Enemy);
-    public static onEnemyAction onEnemyDeath;
+    public onEnemyAction onEnemyDeath;
 
     public enum enemyStates
     {
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public float fireRateMin;
     public float fireRateMax;
     public bool hasWaypoints;
+    public GameObject waypoint;
     public List<GameObject> lootPool;
 
     [Header("Squad")]
@@ -44,7 +45,24 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            onEnemyDeath = deleteEnemyFromSquad;
+            //onEnemyDeath = deleteEnemyFromSquad;
+            //waypoint.SetActive(false);
+        }
+    }
+
+    public void deActivateWaypoint()
+    {
+        if (isParent)
+        {
+            waypoint.SetActive(false);
+        }
+    }
+
+    public void activateWaypoint()
+    {
+        if(isParent)
+        {
+            waypoint.SetActive(true);
         }
     }
 
@@ -110,18 +128,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void deleteEnemyFromSquad(GameObject enemy)
-    {
-        if(isParent)
-        {
-            squadMembers.Remove(enemy);
-            if(squadMembers.Count <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-
     private void die()
     {
         if(!dropItemOnce)
@@ -131,11 +137,16 @@ public class Enemy : MonoBehaviour
 
             if(onEnemyDeath != null)
             {
+                Debug.Log("ENTERING");
                 onEnemyDeath(this.gameObject);
             }
+
+            if(!isParent)
+            {
+                animator.SetBool("isDead", true);
+                Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
+            }
         }
-        animator.SetBool("isDead", true);
-        Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
     }
 
     private void dropRandomItem()
