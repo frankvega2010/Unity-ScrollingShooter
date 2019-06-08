@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float fireRateMin;
     public float fireRateMax;
     public bool hasWaypoints;
+    public bool isParent;
     public List<GameObject> lootPool;
 
     private LaserGun enemyLaserGun;
@@ -29,26 +30,32 @@ public class Enemy : MonoBehaviour
     private bool dropItemOnce;
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        enemyRenderer = GetComponent<SpriteRenderer>();
-        enemyLaserGun = LaserGun.GetComponent<LaserGun>();
+        if(!isParent)
+        {
+            animator = GetComponent<Animator>();
+            enemyRenderer = GetComponent<SpriteRenderer>();
+            enemyLaserGun = LaserGun.GetComponent<LaserGun>();
+        }
     }
 
     private void Update()
     {
-        switch (currentState)
+        if(!isParent)
         {
-            case enemyStates.moving:
-                resetFireRate();
-                fireRateTimer += Time.deltaTime;
-                move();
-                shoot();
-                break;
-            case enemyStates.dead:
-                die();
-                break;
-            default:
-                break;
+            switch (currentState)
+            {
+                case enemyStates.moving:
+                    resetFireRate();
+                    fireRateTimer += Time.deltaTime;
+                    move();
+                    shoot();
+                    break;
+                case enemyStates.dead:
+                    die();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
