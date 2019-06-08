@@ -93,4 +93,18 @@ public class Bullet : MonoBehaviour
                 break;
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "bounds")
+        {
+            animator.SetBool("hasHit", true);
+        }
+        //switch (collision.gameObject.tag)
+        //{
+        //    case "bounds":
+        //        animator.SetBool("hasHit", true);
+        //        break;
+        //}
+    }
 }
