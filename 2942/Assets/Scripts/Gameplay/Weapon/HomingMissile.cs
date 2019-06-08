@@ -45,7 +45,7 @@ public class HomingMissile : MonoBehaviour
                     Quaternion q01 = Quaternion.LookRotation(transform.position - target.transform.position, transform.forward);
                     q01.x = 0;
                     q01.y = 0;
-                    transform.rotation = Quaternion.Slerp(transform.rotation, q01, smoothSpeed * Time.deltaTime);
+                    transform.rotation = q01;
                 }
                 else
                 {

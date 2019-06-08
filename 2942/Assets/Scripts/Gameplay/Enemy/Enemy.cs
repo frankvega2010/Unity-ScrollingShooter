@@ -12,11 +12,12 @@ public class Enemy : MonoBehaviour
     }
     
     public int lives;
-    public Vector3 speed;
+    public float speed;
     public enemyStates currentState;
     public GameObject LaserGun;
     public float fireRateMin;
     public float fireRateMax;
+    public bool hasWaypoints;
     public List<GameObject> lootPool;
 
     private LaserGun enemyLaserGun;
@@ -67,7 +68,10 @@ public class Enemy : MonoBehaviour
 
     private void move()
     {
-        transform.position = transform.position + speed * Time.deltaTime;
+        if (!hasWaypoints)
+        {
+            transform.position = transform.position + new Vector3(0, speed,0) * Time.deltaTime;
+        }
     }
 
     private void resetFireRate()
