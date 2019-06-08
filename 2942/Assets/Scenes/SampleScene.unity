@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  speed: {x: 0, y: -0.5, z: 0}
+  speed: {x: 0, y: -0.1, z: 0}
   currentState: 0
   LaserGun: {fileID: 746499504}
   fireRateMin: 0.5

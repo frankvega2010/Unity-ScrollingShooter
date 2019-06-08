@@ -35,17 +35,22 @@ public class HomingMissile : MonoBehaviour
         {
             if (!animator.GetBool("hasHit"))
             {
-                Vector3 dir;
-                dir = transform.position - target.transform.position;
-                dir.Normalize();
-                transform.position = transform.position - dir * speed * Time.deltaTime;
+                if(target != null)
+                {
+                    Vector3 dir;
+                    dir = transform.position - target.transform.position;
+                    dir.Normalize();
+                    transform.position = transform.position - dir * speed * Time.deltaTime;
 
-                Quaternion q01 = Quaternion.LookRotation(transform.position - target.transform.position, transform.forward);
-                q01.x = 0;
-                q01.y = 0;
-                transform.rotation = Quaternion.Slerp(transform.rotation,q01, smoothSpeed * Time.deltaTime);
-                Debug.Log(transform.rotation);
-                Debug.Log(transform.position);
+                    Quaternion q01 = Quaternion.LookRotation(transform.position - target.transform.position, transform.forward);
+                    q01.x = 0;
+                    q01.y = 0;
+                    transform.rotation = Quaternion.Slerp(transform.rotation, q01, smoothSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
 
