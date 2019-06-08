@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab05e2d21842fc40bf9a8e231aeae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2141474162}
   enemySquads:
   - {fileID: 1539929882}
   - {fileID: 998648586}
@@ -6083,6 +6084,7 @@ MonoBehaviour:
   - {fileID: 473287143}
   firestormX: {fileID: 176267525}
   energy: 100
+  points: 0
   firestormXCharge: 100
   energyDrainRate: 2.5
   newPositionDifference: 0.05

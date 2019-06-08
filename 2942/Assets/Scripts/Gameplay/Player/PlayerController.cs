@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> laserGuns;
     public GameObject firestormX;
     public int energy;
+    public int points;
     public int firestormXCharge;
     public float energyDrainRate;
     public float newPositionDifference;
@@ -86,6 +87,11 @@ public class PlayerController : MonoBehaviour
         {
             playerDie();
         }
+    }
+
+    public void addPoints()
+    {
+        points = points + 10;
     }
 
     public void substractEnergy()

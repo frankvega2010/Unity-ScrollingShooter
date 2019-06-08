@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
     public GameObject[] enemySquads;
     public int maxSquadsOnScreen;
 
     private int currentSquadsOnScreen;
+    private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +18,14 @@ public class GameManager : MonoBehaviour
             enemySquads[i].GetComponent<Enemy>().deActivateWaypoint();
             for (int f= 0; f < enemySquads[i].GetComponent<Enemy>().squadMembers.Count; f++)
             {
-                enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDeath = deleteEnemyFromSquad;
+                enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDeath += deleteEnemyFromSquad;
+                enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDeath += addPointsToPlayer;
             }
             
             enemySquads[i].SetActive(false);
         }
+
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -37,7 +42,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void deleteEnemyFromSquad(GameObject enemy)
+    private void addPointsToPlayer(GameObject enemy)
+    {
+        playerController.addPoints();
+    }
+
+    private void deleteEnemyFromSquad(GameObject enemy)
     {
         GameObject parentOfEnemy = enemy.transform.parent.gameObject;
 
