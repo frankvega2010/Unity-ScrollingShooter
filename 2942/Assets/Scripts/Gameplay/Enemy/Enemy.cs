@@ -10,14 +10,6 @@ public class Enemy : MonoBehaviour
         dead,
         maxStates
     }
-
-    public enum items
-    {
-        rocket,
-        energy,
-        maxItems
-    }
-
     
     public int lives;
     public Vector3 speed;
@@ -27,7 +19,6 @@ public class Enemy : MonoBehaviour
     public float fireRateMax;
     public List<GameObject> lootPool;
 
-    private items itemDrop;
     private LaserGun enemyLaserGun;
     private Animator animator;
     private SpriteRenderer enemyRenderer;
@@ -111,7 +102,6 @@ public class Enemy : MonoBehaviour
 
     private void dropRandomItem()
     {
-        //itemDrop = (items)Random.Range(0, 2);
         int randomChance = Random.Range(0, 11);
 
         switch (randomChance)
@@ -150,18 +140,6 @@ public class Enemy : MonoBehaviour
             default:
                 break;
         }
-
-        //switch (itemDrop)
-        //{
-        //    case items.rocket:
-        //        dropItem("Rocket");
-        //        break;
-        //    case items.energy:
-        //        dropItem("Energy");
-        //        break;
-        //    default:
-        //        break;
-        //}
     }
 
     private void dropItem(string name)
