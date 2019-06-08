@@ -65,6 +65,8 @@ public class HomingMissile : MonoBehaviour
                 break;
             case "bounds":
                 break;
+            case "item":
+                break;
             default:
                 animator.SetBool("hasHit", true);
                 break;

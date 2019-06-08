@@ -6,6 +6,8 @@ public class PlayerCollision : MonoBehaviour
 {
     public delegate void onAction();
     public static onAction onEnemyHit;
+    public static onAction onEnergyCollected;
+    public static onAction onRocketCollected;
 
     private bool isPlayerBeingTarget(Bullet currentBullet)
     {
@@ -37,6 +39,28 @@ public class PlayerCollision : MonoBehaviour
                     {
                         onEnemyHit();
                     }
+                }
+                break;
+            case "item":
+                
+                switch (collision.gameObject.name)
+                {
+                    case "Energy":
+                        if (onEnergyCollected != null)
+                        {
+                            onEnergyCollected();
+                            Destroy(collision.gameObject);
+                        }
+                        break;
+                    case "Rocket":
+                        if (onRocketCollected != null)
+                        {
+                            onRocketCollected();
+                            Destroy(collision.gameObject);
+                        }
+                        break;
+                    default:
+                        break;
                 }
                 break;
             default:

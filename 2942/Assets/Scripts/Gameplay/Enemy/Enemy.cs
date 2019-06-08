@@ -11,6 +11,13 @@ public class Enemy : MonoBehaviour
         maxStates
     }
 
+    public enum items
+    {
+        rocket,
+        energy,
+        maxItems
+    }
+
     
     public int lives;
     public Vector3 speed;
@@ -18,13 +25,16 @@ public class Enemy : MonoBehaviour
     public GameObject LaserGun;
     public float fireRateMin;
     public float fireRateMax;
+    public List<GameObject> lootPool;
 
+    private items itemDrop;
     private LaserGun enemyLaserGun;
     private Animator animator;
     private SpriteRenderer enemyRenderer;
     private float fireRate;
     private float fireRateTimer;
-    private bool doOnce;
+    private bool resetFireRateOnce;
+    private bool dropItemOnce;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -71,10 +81,10 @@ public class Enemy : MonoBehaviour
 
     private void resetFireRate()
     {
-        if (!doOnce)
+        if (!resetFireRateOnce)
         {
             fireRate = Random.Range(fireRateMin, fireRateMax);
-            doOnce = true;
+            resetFireRateOnce = true;
         }
     }
 
@@ -83,15 +93,89 @@ public class Enemy : MonoBehaviour
         if (fireRateTimer >= fireRate)
         {
             enemyLaserGun.Shoot();
-            doOnce = false;
+            resetFireRateOnce = false;
             fireRateTimer = 0;
         }
     }
 
     private void die()
     {
+        if(!dropItemOnce)
+        {
+            dropRandomItem();
+            dropItemOnce = true;
+        }
         animator.SetBool("isDead", true);
         Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
+    }
+
+    private void dropRandomItem()
+    {
+        //itemDrop = (items)Random.Range(0, 2);
+        int randomChance = Random.Range(0, 11);
+
+        switch (randomChance)
+        {
+            case 0:
+                dropItem("Energy");
+                break;
+            case 1:
+                dropItem("Energy");
+                break;
+            case 2:
+                dropItem("Energy");
+                break;
+            case 3:
+                dropItem("Energy");
+                break;
+            case 4:
+                dropItem("Energy");
+                break;
+            case 5:
+                dropItem("Energy");
+                break;
+            case 6:
+                dropItem("Energy");
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                dropItem("Rocket");
+                break;
+            case 10:
+                dropItem("Rocket");
+                break;
+            default:
+                break;
+        }
+
+        //switch (itemDrop)
+        //{
+        //    case items.rocket:
+        //        dropItem("Rocket");
+        //        break;
+        //    case items.energy:
+        //        dropItem("Energy");
+        //        break;
+        //    default:
+        //        break;
+        //}
+    }
+
+    private void dropItem(string name)
+    {
+        foreach (GameObject currentLoot in lootPool)
+        {
+            if(currentLoot.name == name)
+            {
+                GameObject lootToDrop = Instantiate(currentLoot);
+                lootToDrop.SetActive(true);
+                lootToDrop.name = name;
+                lootToDrop.transform.position = transform.position;
+            }
+        }
     }
 
     private void switchColorBack()
@@ -127,6 +211,8 @@ public class Enemy : MonoBehaviour
                 break;
             case "Player":
                 hitEnemy();
+                break;
+            case "item":
                 break;
             default:
                 break;

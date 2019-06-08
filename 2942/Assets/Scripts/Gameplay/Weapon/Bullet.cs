@@ -80,6 +80,8 @@ public class Bullet : MonoBehaviour
                 break;
             case "bounds":
                 break;
+            case "item":
+                break;
             case "enemy":
                 if (!isPlayerBeingTarget())
                 {

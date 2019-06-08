@@ -7,6 +7,7 @@ public class LaserGun : MonoBehaviour
     public GameObject bulletInstance;
     public float fireRate;
     public bool isBot;
+    public bool isMainGun;
     public GameObject target;
 
     private bool isFiring;

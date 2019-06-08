@@ -8,6 +8,9 @@ TagManager:
   - bullet
   - bounds
   - homingbullet
+  - item
+  - energy
+  - rocketItem
   layers:
   - Default
   - TransparentFX

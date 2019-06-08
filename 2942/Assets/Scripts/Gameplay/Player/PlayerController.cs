@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public int firestormXCharge;
     public float energyDrainRate;
     public float newPositionDifference;
+    public int maxCannons;
+    public int energyRecovery;
+    public int receivedDamage;
 
     public float duplicateCount;
     private int newPositionDirection;
@@ -36,7 +39,10 @@ public class PlayerController : MonoBehaviour
         spawnCount = 0;
         constantNewPositionDifference = newPositionDifference;
         playerFirestormX = firestormX.GetComponent<FirestormX>();
-        PlayerCollision.onEnemyHit = substractEnergy;
+        PlayerCollision.onEnemyHit += substractEnergy;
+        PlayerCollision.onEnemyHit += RemoveUpgrades;
+        PlayerCollision.onEnergyCollected = RecoverEnergy;
+        PlayerCollision.onRocketCollected = addCannon;
         playerRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -55,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Alpha1)) // DEBUG
         {
-            if(playerLaserGuns.Count < 5)
+            if(playerLaserGuns.Count < maxCannons)
             {
                 addCannon();
             }
@@ -84,8 +90,38 @@ public class PlayerController : MonoBehaviour
 
     public void substractEnergy()
     {
-        energy = energy - 5;
-        playerRenderer.material.color = Color.red;
+        energy = energy - receivedDamage;
+        ChangeColor(Color.red);
+    }
+
+    private void RemoveUpgrades()
+    {
+        if(playerLaserGuns.Count > 1)
+        {
+            LaserGun gun;
+            int maxGuns = playerLaserGuns.Count - 1;
+            for (int i = maxGuns; i > 0; i--)
+            {
+                gun = playerLaserGuns[i].GetComponent<LaserGun>();
+                if (!gun.isMainGun)
+                {
+                    playerLaserGuns.Remove(gun);
+                    Destroy(gun.gameObject);
+                }
+            }
+            ResetRocketPositions();
+        }
+    }
+
+    private void RecoverEnergy()
+    {
+        energy = energy + energyRecovery;
+        ChangeColor(Color.green);
+    }
+
+    private void ChangeColor(Color color)
+    {
+        playerRenderer.material.color = color;
         Invoke("switchColorBack", 0.1f);
     }
 
@@ -102,23 +138,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void ResetRocketPositions()
+    {
+        duplicateCount = 1;
+        spawnCount = 0;
+        constantNewPositionDifference = newPositionDifference * duplicateCount;
+    }
+
     private void addCannon()
     {
-        LaserGun laserGunInstance = Instantiate(laserGunTemplate);
-        laserGunInstance.transform.SetParent(gameObject.transform);
-        laserGunInstance.transform.localPosition = Vector3.zero;
-        spawnCount++;
-        newPositionDirection = newPositionDirection * -1;
-        laserGunInstance.transform.localPosition = laserGunInstance.transform.localPosition + (new Vector3(constantNewPositionDifference, 0,0) * newPositionDirection); // direction 1 or -1
-        playerLaserGuns.Add(laserGunInstance);
-
-        if (isSpawnCountPair())
+        if (playerLaserGuns.Count < maxCannons)
         {
-            duplicateCount++;
-            constantNewPositionDifference = newPositionDifference * duplicateCount;
-            spawnCount = 0;
-        }
+            for (int i = 0; i < 2; i++)
+            {
+                LaserGun laserGunInstance = Instantiate(laserGunTemplate);
+                laserGunInstance.transform.SetParent(gameObject.transform);
+                laserGunInstance.transform.localPosition = Vector3.zero;
+                laserGunInstance.GetComponent<LaserGun>().isMainGun = false;
+                spawnCount++;
+                newPositionDirection = newPositionDirection * -1;
+                laserGunInstance.transform.localPosition = laserGunInstance.transform.localPosition + (new Vector3(constantNewPositionDifference, 0, 0) * newPositionDirection); // direction 1 or -1
+                playerLaserGuns.Add(laserGunInstance);
 
+                if (isSpawnCountPair())
+                {
+                    duplicateCount++;
+                    constantNewPositionDifference = newPositionDifference * duplicateCount;
+                    spawnCount = 0;
+                }
+            }
+        }
+        
     }
 
     private bool isSpawnCountPair()
