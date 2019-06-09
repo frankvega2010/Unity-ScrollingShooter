@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     public List<GameObject> laserGuns;
     public GameObject firestormX;
+    public GameObject EnergyBar;
+    public GameObject FirestormXBar;
     public int energy;
     public int points;
     public int firestormXCharge;
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private FirestormX playerFirestormX;
     private float energyDrainTimer;
     public int spawnCount;
+    private Scrollbar energyScrollbar;
+    private Scrollbar firestormXScrollbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,14 +50,18 @@ public class PlayerController : MonoBehaviour
         PlayerCollision.onEnergyCollected = RecoverEnergy;
         PlayerCollision.onRocketCollected = addCannon;
         playerRenderer = GetComponent<SpriteRenderer>();
+        energyScrollbar = EnergyBar.GetComponent<Scrollbar>();
+        firestormXScrollbar = FirestormXBar.GetComponent<Scrollbar>();
     }
 
     // Update is called once per frame
     void Update()
     {
         energyDrainTimer += Time.deltaTime;
+        energyScrollbar.size = energy * 0.01f;
+        firestormXScrollbar.size = firestormXCharge * 0.01f;
 
-        if(Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.F))
         {
             foreach (LaserGun LaserGun in playerLaserGuns)
             {
