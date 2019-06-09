@@ -4148,6 +4148,54 @@ Transform:
   m_Father: {fileID: 1481316959}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1028103793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1028103794}
+  - component: {fileID: 1028103795}
+  m_Layer: 0
+  m_Name: PlayerModifiers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1028103794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028103793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2141474164}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1028103795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028103793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddece3ed6ae63364f82f2e12b1442150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyDrainRate: 2.5
+  newPositionDifference: 0.05
+  maxCannons: 5
+  energyRecovery: 2
+  receivedDamage: 5
 --- !u!1 &1036206064
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5168,7 @@ GameObject:
   - component: {fileID: 1198866985}
   - component: {fileID: 1198866984}
   - component: {fileID: 1198866983}
+  - component: {fileID: 1198866986}
   m_Layer: 5
   m_Name: FirestormX Bar
   m_TagString: Untagged
@@ -5233,6 +5282,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198866981}
   m_CullTransparentMesh: 0
+--- !u!114 &1198866986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198866981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489798d188d1216489798379ffd5d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &1200457937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,6 +6743,52 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+--- !u!1 &1526945259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526945260}
+  - component: {fileID: 1526945261}
+  m_Layer: 0
+  m_Name: Status
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526945260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526945259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2141474164}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526945261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526945259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8828a2a11cb8f40845635ef8566382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 100
+  points: 0
+  firestormXCharge: 100
 --- !u!1 &1533073268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7984,6 +8092,7 @@ GameObject:
   - component: {fileID: 1869858985}
   - component: {fileID: 1869858984}
   - component: {fileID: 1869858983}
+  - component: {fileID: 1869858986}
   m_Layer: 5
   m_Name: Energy Bar
   m_TagString: Untagged
@@ -8097,6 +8206,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869858981}
   m_CullTransparentMesh: 0
+--- !u!114 &1869858986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869858981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489798d188d1216489798379ffd5d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &1894867695
 GameObject:
   m_ObjectHideFlags: 0
@@ -9137,6 +9259,8 @@ Transform:
   m_Children:
   - {fileID: 473287144}
   - {fileID: 176267526}
+  - {fileID: 1028103794}
+  - {fileID: 1526945260}
   m_Father: {fileID: 1842531789}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9184,22 +9308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517c4550ac289e945ad52c62ab42b891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStatusGameObject: {fileID: 1526945259}
   laserGuns:
   - {fileID: 473287143}
+  playerLaserGuns: []
   firestormX: {fileID: 176267525}
+  playerModifiersGameObject: {fileID: 1028103793}
   EnergyBar: {fileID: 1869858981}
   FirestormXBar: {fileID: 1198866981}
-  energy: 100
-  points: 0
-  firestormXCharge: 100
-  energyDrainRate: 2.5
-  newPositionDifference: 0.05
-  maxCannons: 5
-  energyRecovery: 2
-  receivedDamage: 5
-  duplicateCount: 0
-  playerLaserGuns: []
-  spawnCount: 0
 --- !u!60 &2141474168
 PolygonCollider2D:
   m_ObjectHideFlags: 0

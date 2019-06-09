@@ -8,58 +8,67 @@ public class PlayerController : MonoBehaviour
     public delegate void onPlayerAction();
     public static onPlayerAction onPlayerDeath;
 
+    [Header("Game Objects")]
+    public GameObject playerStatusGameObject;
     public List<GameObject> laserGuns;
+    public List<LaserGun> playerLaserGuns;
     public GameObject firestormX;
+    public GameObject playerModifiersGameObject;
+
+    [Header("Bars")]
     public GameObject EnergyBar;
     public GameObject FirestormXBar;
-    public int energy;
-    public int points;
-    public int firestormXCharge;
-    public float energyDrainRate;
-    public float newPositionDifference;
-    public int maxCannons;
-    public int energyRecovery;
-    public int receivedDamage;
 
-    public float duplicateCount;
+    private float duplicateCount;
     private int newPositionDirection;
     private float constantNewPositionDifference;
+
     private SpriteRenderer playerRenderer;
-    public List<LaserGun> playerLaserGuns;
+    
     private LaserGun laserGunTemplate;
     private FirestormX playerFirestormX;
     private float energyDrainTimer;
-    public int spawnCount;
-    private Scrollbar energyScrollbar;
-    private Scrollbar firestormXScrollbar;
+    private int spawnCount;
+
+    private StatusBar energyStatusBar;
+    private StatusBar firestormXStatusBar;
+
+    private PlayerModifiers playerModifiers;
+    private PlayerStatus playerStatus;
     // Start is called before the first frame update
     void Start()
     {
+        playerModifiers = playerModifiersGameObject.GetComponent<PlayerModifiers>();
+
         foreach (GameObject LaserGun in laserGuns)
         {
             playerLaserGuns.Add(LaserGun.GetComponent<LaserGun>());
             laserGunTemplate = LaserGun.GetComponent<LaserGun>();
         }
+
+        playerFirestormX = firestormX.GetComponent<FirestormX>();
+        playerRenderer = GetComponent<SpriteRenderer>();
+        energyStatusBar = EnergyBar.GetComponent<StatusBar>();
+        firestormXStatusBar = FirestormXBar.GetComponent<StatusBar>();
+        playerStatus = playerStatusGameObject.GetComponent<PlayerStatus>();
+
         newPositionDirection = 1;
         duplicateCount = 1;
         spawnCount = 0;
-        constantNewPositionDifference = newPositionDifference;
-        playerFirestormX = firestormX.GetComponent<FirestormX>();
+        constantNewPositionDifference = playerModifiers.newPositionDifference;
+
         PlayerCollision.onEnemyHit += substractEnergy;
         PlayerCollision.onEnemyHit += RemoveUpgrades;
         PlayerCollision.onEnergyCollected = RecoverEnergy;
         PlayerCollision.onRocketCollected = addCannon;
-        playerRenderer = GetComponent<SpriteRenderer>();
-        energyScrollbar = EnergyBar.GetComponent<Scrollbar>();
-        firestormXScrollbar = FirestormXBar.GetComponent<Scrollbar>();
     }
 
     // Update is called once per frame
     void Update()
     {
         energyDrainTimer += Time.deltaTime;
-        energyScrollbar.size = energy * 0.01f;
-        firestormXScrollbar.size = firestormXCharge * 0.01f;
+        energyStatusBar.value = playerStatus.energy;
+        firestormXStatusBar.value = playerStatus.firestormXCharge;
 
         if (Input.GetKey(KeyCode.F))
         {
@@ -71,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Alpha1)) // DEBUG
         {
-            if(playerLaserGuns.Count < maxCannons)
+            if(playerLaserGuns.Count < playerModifiers.maxCannons)
             {
                 addCannon();
             }
@@ -79,20 +88,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(firestormXCharge >= 100)
+            if(playerStatus.firestormXCharge >= 100)
             {
-                firestormXCharge = 0;
+                playerStatus.firestormXCharge = 0;
                 playerFirestormX.Shoot();
             }
         }
 
-        if(energyDrainTimer >= energyDrainRate)
+        if(energyDrainTimer >= playerModifiers.energyDrainRate)
         {
             energyDrainTimer = 0;
-            energy--;
+            playerStatus.energy--;
         }
 
-        if(energy <= 0)
+        if(playerStatus.energy <= 0)
         {
             playerDie();
         }
@@ -100,12 +109,12 @@ public class PlayerController : MonoBehaviour
 
     public void addPoints()
     {
-        points = points + 10;
+        playerStatus.points = playerStatus.points + 10;
     }
 
     public void substractEnergy()
     {
-        energy = energy - receivedDamage;
+        playerStatus.energy = playerStatus.energy - playerModifiers.receivedDamage;
         ChangeColor(Color.red);
     }
 
@@ -130,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     private void RecoverEnergy()
     {
-        energy = energy + energyRecovery;
+        playerStatus.energy = playerStatus.energy + playerModifiers.energyRecovery;
         ChangeColor(Color.green);
     }
 
@@ -157,12 +166,12 @@ public class PlayerController : MonoBehaviour
     {
         duplicateCount = 1;
         spawnCount = 0;
-        constantNewPositionDifference = newPositionDifference * duplicateCount;
+        constantNewPositionDifference = playerModifiers.newPositionDifference * duplicateCount;
     }
 
     private void addCannon()
     {
-        if (playerLaserGuns.Count < maxCannons)
+        if (playerLaserGuns.Count < playerModifiers.maxCannons)
         {
             for (int i = 0; i < 2; i++)
             {
@@ -178,7 +187,7 @@ public class PlayerController : MonoBehaviour
                 if (isSpawnCountPair())
                 {
                     duplicateCount++;
-                    constantNewPositionDifference = newPositionDifference * duplicateCount;
+                    constantNewPositionDifference = playerModifiers.newPositionDifference * duplicateCount;
                     spawnCount = 0;
                 }
             }
