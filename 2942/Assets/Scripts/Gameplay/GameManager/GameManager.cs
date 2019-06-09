@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 
                     if (parentOfEnemy.GetComponent<Enemy>().squadMembers.Count <= 0)
                     {
+                        enemy.transform.SetParent(gameObject.transform);
                         Destroy(parentOfEnemy);
                         enemySquads[i] = null;
                         currentSquadsOnScreen--;
