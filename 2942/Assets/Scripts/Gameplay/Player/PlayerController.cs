@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
         PlayerCollision.onEnemyHit += RemoveUpgrades;
         PlayerCollision.onEnergyCollected = RecoverEnergy;
         PlayerCollision.onRocketCollected = addCannon;
+        GameManager.onRoundEnd += disableUI;
+
     }
 
     // Update is called once per frame
@@ -202,5 +204,18 @@ public class PlayerController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private void disableUI()
+    {
+        EnergyBar.SetActive(false);
+        FirestormXBar.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerCollision.onEnemyHit -= substractEnergy;
+        PlayerCollision.onEnemyHit -= RemoveUpgrades;
+        GameManager.onRoundEnd -= disableUI;
     }
 }

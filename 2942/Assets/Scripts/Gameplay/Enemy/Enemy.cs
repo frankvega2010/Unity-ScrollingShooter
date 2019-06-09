@@ -43,11 +43,6 @@ public class Enemy : MonoBehaviour
             enemyRenderer = GetComponent<SpriteRenderer>();
             enemyLaserGun = LaserGun.GetComponent<LaserGun>();
         }
-        else
-        {
-            //onEnemyDeath = deleteEnemyFromSquad;
-            //waypoint.SetActive(false);
-        }
     }
 
     public void deActivateWaypoint()
@@ -113,6 +108,12 @@ public class Enemy : MonoBehaviour
                 currentState = enemyStates.dead;
             }
         }
+    }
+
+    public void killEnemy()
+    {
+        animator.SetBool("isDead", true);
+        Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
     }
 
     private void move()

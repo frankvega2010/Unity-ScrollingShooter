@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         PlayerController.onPlayerDeath += DisableMovement;
+        GameManager.onRoundEnd += DisableMovement;
     }
 
     // Update is called once per frame
@@ -60,5 +61,10 @@ public class PlayerMovement : MonoBehaviour
     private void DisableMovement()
     {
         enabled = false;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.onRoundEnd -= DisableMovement;
     }
 }
