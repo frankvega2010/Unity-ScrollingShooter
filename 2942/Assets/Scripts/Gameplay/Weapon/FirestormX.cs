@@ -4,29 +4,44 @@ using UnityEngine;
 
 public class FirestormX : MonoBehaviour
 {
+    public GameObject GameManager;
     public GameObject missileInstance;
-    //public float fireRate;
 
-    //private bool isFiring;
-    //private float fireRateTimer;
-    //private void Update()
-    //{
-    //    if (isFiring)
-    //    {
-    //        fireRateTimer += Time.deltaTime;
-    //    }
-
-    //    //if (fireRateTimer > fireRate)
-    //    //{
-    //    //    isFiring = false;
-    //    //    fireRateTimer = 0;
-    //    //}
-    //}
+    public List<GameObject> enemyShips;
+    private GameManager gameManager;
+    private void Start()
+    {
+        gameManager = GameManager.GetComponent<GameManager>();
+    }
 
     public void Shoot()
     {
+        if (enemyShips.Count > 0)
+        {
+            enemyShips.Clear();
+        }
+
+        for (int i = 0; i < gameManager.enemySquads.Length; i++)
+        {
+            if (gameManager.enemySquads[i] != null && gameManager.enemySquads[i].activeSelf)
+            {
+                for (int f = 0; f < gameManager.enemySquads[i].GetComponent<Enemy>().squadMembers.Count; f++)
+                {
+                    enemyShips.Add(gameManager.enemySquads[i].GetComponent<Enemy>().squadMembers[f]);
+                    //if (gameManager.enemySquads[i].GetComponent<Enemy>().squadMembers[f].activeSelf)
+                    //{
+                        
+                    //}
+                }
+            }
+        }
+
+        foreach (GameObject enemy in enemyShips)
+        {
             GameObject bullet = Instantiate(missileInstance, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
             bullet.transform.position = GetComponent<Transform>().position;
+            bullet.GetComponent<HomingMissile>().target = enemy;
             bullet.SetActive(true);
+        }
     }
 }

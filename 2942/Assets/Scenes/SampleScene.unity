@@ -759,7 +759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84cebbba195d754a9cb6fe8d46efe08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 288105317}
   missileInstance: {fileID: 221602091}
+  enemyShips: []
 --- !u!1 &184051396
 GameObject:
   m_ObjectHideFlags: 0

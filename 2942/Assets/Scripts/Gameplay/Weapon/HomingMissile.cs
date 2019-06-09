@@ -73,7 +73,10 @@ public class HomingMissile : MonoBehaviour
             case "item":
                 break;
             default:
-                animator.SetBool("hasHit", true);
+                if(collision.gameObject == target)
+                {
+                    animator.SetBool("hasHit", true);
+                }
                 break;
         }
         

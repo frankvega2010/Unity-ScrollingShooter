@@ -101,6 +101,20 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void hitEnemy(int damage)
+    {
+        if (lives > 0)
+        {
+            lives = lives - damage;
+            enemyRenderer.material.color = Color.red;
+            Invoke("switchColorBack", 0.1f);
+            if (lives <= 0)
+            {
+                currentState = enemyStates.dead;
+            }
+        }
+    }
+
     private void move()
     {
         if (!hasWaypoints)
@@ -234,7 +248,10 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case "homingbullet":
-                    hitEnemy();
+                if (collision.gameObject.GetComponent<HomingMissile>().target == gameObject)
+                {
+                    hitEnemy(999);
+                }
                 break;
             case "Player":
                 hitEnemy();
