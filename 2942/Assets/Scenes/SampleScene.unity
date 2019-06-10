@@ -436,6 +436,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -1030,6 +1031,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1006223577}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -1752,6 +1754,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -1923,6 +1926,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 32504153}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -2380,6 +2384,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -3004,6 +3009,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1429553186}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -3294,6 +3300,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -3465,6 +3472,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 44798543}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -3731,6 +3739,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -4142,6 +4151,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1365150180}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -4284,6 +4294,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -4550,6 +4561,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -5118,6 +5130,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1109204460}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -5396,6 +5409,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1109204460}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -5530,6 +5544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1742048790}
+  - {fileID: 1222693486}
   - {fileID: 1077017922}
   - {fileID: 1547839829}
   - {fileID: 338824743}
@@ -5635,6 +5650,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -5956,6 +5972,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 172108495}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -6154,7 +6171,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &282613495
 MonoBehaviour:
@@ -6539,6 +6556,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 0
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -6880,6 +6898,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1775718028}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -6997,6 +7016,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -7325,6 +7345,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1382092858}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -7511,6 +7532,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1067395789}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -7788,6 +7810,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 172108495}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -7946,6 +7969,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1576977812}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -8084,6 +8108,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -8271,6 +8296,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 44798543}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -8409,7 +8435,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &338824744
 MonoBehaviour:
@@ -9163,6 +9189,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1365150180}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -9379,6 +9406,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1382092858}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -9640,6 +9668,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -9784,6 +9813,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1429553186}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 0}
@@ -9889,6 +9919,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1958130522}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -10051,6 +10082,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1347761189}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -10268,6 +10300,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 32504153}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -10573,6 +10606,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1275718540}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -10908,6 +10942,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 0
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -11079,6 +11114,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1642793164}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -11266,6 +11302,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1109204460}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -11438,6 +11475,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1067395789}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -11606,6 +11644,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1365150180}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -12150,7 +12189,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554970446
 GameObject:
@@ -12388,6 +12427,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 74615999}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -12492,6 +12532,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1874596115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -12758,6 +12799,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1777689205}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -13194,6 +13236,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1115944732}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -13321,6 +13364,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 96106127}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -13995,6 +14039,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -14241,6 +14286,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1296438719}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -14427,6 +14473,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 172108495}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -14715,6 +14762,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1182040764}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -15002,6 +15050,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 0
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -15253,6 +15302,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -15481,7 +15531,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &739182710
 MonoBehaviour:
@@ -15982,6 +16032,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -16283,6 +16334,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -16525,6 +16577,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1874596115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -16827,6 +16880,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 635566840}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -17295,6 +17349,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -17546,6 +17601,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -17673,6 +17729,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1347761189}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -17775,6 +17832,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 96106127}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -18131,6 +18189,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1901625042}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -19198,6 +19257,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -19437,6 +19497,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -19959,6 +20020,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1881788471}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -20483,6 +20545,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 172108495}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -21008,6 +21071,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1642793164}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -21140,6 +21204,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1382092858}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -21414,6 +21479,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 96106127}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -21556,6 +21622,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1444836076}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -21671,7 +21738,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &1077017923
 MonoBehaviour:
@@ -21926,6 +21993,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1874596115}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -22157,6 +22225,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1115944732}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -22595,6 +22664,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1109204460}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -22733,6 +22803,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -22996,6 +23067,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -23473,6 +23545,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1182040764}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -24007,6 +24080,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1874596115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -24223,6 +24297,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1444836076}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -24455,6 +24530,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1296438719}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -24580,6 +24656,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 129946024}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -24782,6 +24859,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 616067557}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -24889,6 +24967,85 @@ Transform:
   m_Father: {fileID: 1333018346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1222693485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222693486}
+  - component: {fileID: 1222693488}
+  - component: {fileID: 1222693487}
+  m_Layer: 0
+  m_Name: Bullets Bounds
+  m_TagString: bulletBounds
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1222693486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222693485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9653704, y: 0.5343797, z: 0.1139797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 241613352}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1222693487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222693485}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!61 &1222693488
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222693485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.30833602, y: -0.36379504}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.223054, y: 1.8279529}
+  m_EdgeRadius: 0
 --- !u!1 &1223575162
 GameObject:
   m_ObjectHideFlags: 0
@@ -25259,6 +25416,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 908139453}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -25785,6 +25943,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -26078,6 +26237,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1429553186}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -26249,6 +26409,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 32504153}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -26549,6 +26710,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 32504153}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -26778,6 +26940,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1006223577}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -27038,6 +27201,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -27180,6 +27344,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 44798543}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -27242,6 +27407,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 616067557}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -27476,6 +27642,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1382092858}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -27538,6 +27705,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1881788471}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -28688,6 +28856,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1115944732}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -29056,6 +29225,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 44798543}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -29198,6 +29368,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 419461328}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -30187,6 +30358,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1296438719}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -30856,6 +31028,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -31054,7 +31227,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &1547839830
 MonoBehaviour:
@@ -31214,6 +31387,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1275718540}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -31382,6 +31556,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 47095169}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -31602,6 +31777,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1901625042}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -31660,6 +31836,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 908139453}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -31854,6 +32031,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1775718028}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -32047,6 +32225,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1006223577}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -32296,6 +32475,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 908139453}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -32794,6 +32974,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -33185,6 +33366,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1777689205}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -33721,6 +33903,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -33910,6 +34093,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1738799055}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -34012,6 +34196,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1275718540}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -34428,6 +34613,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1435825151}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -34673,6 +34859,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 419461328}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -35016,6 +35203,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1614904395}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -35252,6 +35440,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1444836076}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -35503,6 +35692,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1971270115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -35828,6 +36018,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1275718540}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -36540,6 +36731,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1115944732}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -36749,6 +36941,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1738799055}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -37078,6 +37271,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1971270115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -37300,6 +37494,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1435825151}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -37402,6 +37597,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1006223577}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -37662,6 +37858,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1881788471}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -38095,6 +38292,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -38421,6 +38619,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 96106127}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -38868,7 +39067,7 @@ Transform:
   m_LocalScale: {x: 0.71929, y: 0.71929, z: 0.71929}
   m_Children: []
   m_Father: {fileID: 241613352}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 180, y: 270, z: 90}
 --- !u!114 &1887913660
 MonoBehaviour:
@@ -39350,6 +39549,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -39492,6 +39692,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 129946024}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -39719,6 +39920,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1429553186}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -40436,6 +40638,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1958130522}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -41028,6 +41231,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 0}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -41456,6 +41660,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1365150180}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -41628,6 +41833,7 @@ MonoBehaviour:
   fireRateMin: 0
   fireRateMax: 0
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1971270115}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}
@@ -41826,6 +42032,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 2006044898}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -42168,6 +42375,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -42385,6 +42593,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1971270115}
   ExplosionObject: {fileID: 1779551341}
   hurtObject: {fileID: 1464988150}
@@ -42601,6 +42810,7 @@ MonoBehaviour:
   fireRateMin: 2
   fireRateMax: 5
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 1296438719}
   ExplosionObject: {fileID: 1170980449}
   hurtObject: {fileID: 1464988150}
@@ -42869,6 +43079,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 3
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 762947154}
   ExplosionObject: {fileID: 1315229062}
   hurtObject: {fileID: 1464988150}
@@ -43470,6 +43681,7 @@ MonoBehaviour:
   fireRateMin: 1
   fireRateMax: 2
   hasWaypoints: 1
+  canShoot: 0
   waypoint: {fileID: 940270296}
   ExplosionObject: {fileID: 0}
   hurtObject: {fileID: 0}

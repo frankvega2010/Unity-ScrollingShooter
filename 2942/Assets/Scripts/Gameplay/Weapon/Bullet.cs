@@ -80,6 +80,8 @@ public class Bullet : MonoBehaviour
                 break;
             case "bounds":
                 break;
+            case "bulletBounds":
+                break;
             case "item":
                 break;
             case "enemy":
@@ -96,7 +98,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "bounds")
+        if(collision.gameObject.tag == "bounds" || collision.gameObject.tag == "bulletBounds")
         {
             animator.SetBool("hasHit", true);
         }

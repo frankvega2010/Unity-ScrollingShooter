@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public float fireRateMin;
     public float fireRateMax;
     public bool hasWaypoints;
+    public bool canShoot;
     public GameObject waypoint;
     public GameObject ExplosionObject;
     public GameObject hurtObject;
@@ -145,7 +146,10 @@ public class Enemy : MonoBehaviour
     {
         if (fireRateTimer >= fireRate)
         {
-            enemyLaserGun.Shoot();
+            if(canShoot)
+            {
+                enemyLaserGun.Shoot();
+            }
             resetFireRateOnce = false;
             fireRateTimer = 0;
         }
@@ -272,6 +276,9 @@ public class Enemy : MonoBehaviour
                 break;
             case "item":
                 break;
+            case "bulletBounds":
+                canShoot = true;
+                break;
             default:
                 break;
         }
@@ -287,6 +294,9 @@ public class Enemy : MonoBehaviour
                     onEnemyDestroyed(this.gameObject);
                 }
                 Destroy(this.gameObject);
+                break;
+            case "bulletBounds":
+                canShoot = false;
                 break;
             default:
                 break;

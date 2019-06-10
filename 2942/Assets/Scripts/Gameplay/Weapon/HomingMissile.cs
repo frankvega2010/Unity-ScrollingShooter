@@ -70,6 +70,8 @@ public class HomingMissile : MonoBehaviour
                 break;
             case "bounds":
                 break;
+            case "bulletBounds":
+                break;
             case "item":
                 break;
             default:
@@ -80,5 +82,13 @@ public class HomingMissile : MonoBehaviour
                 break;
         }
         
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bounds" || collision.gameObject.tag == "bulletBounds")
+        {
+            animator.SetBool("hasHit", true);
+        }
     }
 }
