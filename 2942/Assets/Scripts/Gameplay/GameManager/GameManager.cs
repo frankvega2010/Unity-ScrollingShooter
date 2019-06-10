@@ -94,10 +94,10 @@ public class GameManager : MonoBehaviour
                 if (parentOfEnemy.name == enemySquads[i].name)
                 {
                     parentOfEnemy.GetComponent<Enemy>().squadMembers.Remove(enemy);
+                    enemy.transform.SetParent(gameObject.transform);
 
                     if (parentOfEnemy.GetComponent<Enemy>().squadMembers.Count <= 0)
                     {
-                        enemy.transform.SetParent(gameObject.transform);
                         Destroy(parentOfEnemy);
                         enemySquads[i] = null;
                         currentSquadsOnScreen--;
@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
                         {
                             if(enemySquads[i].GetComponent<Enemy>().squadMembers[f] != null)
                             {
+                                enemySquads[i].GetComponent<Enemy>().squadMembers[f].transform.SetParent(gameObject.transform);
                                 enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().killEnemy();
                             }
                         }
