@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemySquads;
     public GameObject distanceTextGameObject;
     public GameObject roundEndUI;
+    
     //public GameObject upgradesIcons;
     public string nextSceneName;
     public float waitingTime;
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int currentSquadsOnScreen;
     private PlayerController playerController;
     private DisplayNumbers distanceText;
+    
     //private DisplayUpgrades upgradesDisplay;
     private RoundEnd roundEndMessage;
     private bool endRoundOnce;

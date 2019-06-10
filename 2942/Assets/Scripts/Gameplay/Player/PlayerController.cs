@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject firestormX;
     public GameObject playerModifiersGameObject;
     public GameObject upgradesIcons;
+    public GameObject pointsUI;
 
     [Header("Bars")]
     public GameObject EnergyBar;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private PlayerModifiers playerModifiers;
     private PlayerStatus playerStatus;
     private DisplayUpgrades upgradesDisplay;
+    private DisplayNumbers pointsDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         duplicateCount = 1;
         spawnCount = 0;
         constantNewPositionDifference = playerModifiers.newPositionDifference;
+        pointsDisplay = pointsUI.GetComponent<DisplayNumbers>();
 
         PlayerCollision.onEnemyHit += substractEnergy;
         PlayerCollision.onEnemyHit += RemoveUpgrades;
@@ -127,6 +130,7 @@ public class PlayerController : MonoBehaviour
     public void addPoints()
     {
         playerStatus.points = playerStatus.points + 10;
+        pointsDisplay.number = playerStatus.points;
     }
 
     public void substractEnergy()
