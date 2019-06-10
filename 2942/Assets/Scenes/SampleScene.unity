@@ -112,6 +112,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8009411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8009412}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8009412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4912922, y: 3.0546658, z: 0.836813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1317064496}
+  - {fileID: 1779551342}
+  - {fileID: 1315229063}
+  - {fileID: 1170980450}
+  - {fileID: 749437393}
+  - {fileID: 648343355}
+  - {fileID: 117865641}
+  - {fileID: 1510183378}
+  - {fileID: 311499222}
+  - {fileID: 1464988151}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &17478426
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +186,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &17478428
 Transform:
@@ -396,6 +437,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -534,6 +577,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &42800472
 Transform:
@@ -889,6 +933,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &53192036
 GameObject:
@@ -986,6 +1031,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1006223577}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -1122,6 +1169,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!1 &57572789
 GameObject:
@@ -1171,6 +1219,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &61519610
 GameObject:
@@ -1476,6 +1525,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &70611591
 Transform:
@@ -1703,6 +1753,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -1872,6 +1924,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 32504153}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -2040,6 +2094,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &80459262
 Transform:
@@ -2133,6 +2188,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!1 &88033855
 GameObject:
@@ -2228,6 +2284,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &90433309
 Transform:
@@ -2324,6 +2381,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -2569,6 +2628,133 @@ Transform:
   m_Father: {fileID: 172108497}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &117865640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117865641}
+  - component: {fileID: 117865642}
+  m_Layer: 0
+  m_Name: EnemyShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117865641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117865640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &117865642
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117865640}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e178e1fb5434c3b43b64fe86a67ef811, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.593
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &119715832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,6 +3005,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1429553186}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -3107,6 +3295,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -3276,6 +3466,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 44798543}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -3457,6 +3649,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &165782854
 GameObject:
@@ -3539,6 +3732,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -3835,6 +4030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 288105317}
   missileInstance: {fileID: 221602091}
+  soundObject: {fileID: 648343354}
   enemyShips: []
 --- !u!1 &181447110
 GameObject:
@@ -3947,6 +4143,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1365150180}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -4087,6 +4285,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -4282,6 +4482,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &202899098
 GameObject:
@@ -4350,6 +4551,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -4441,6 +4644,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &216519863
 Transform:
@@ -4656,6 +4860,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &223455240
 Transform:
@@ -4735,6 +4940,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &226205466
 Transform:
@@ -4816,6 +5022,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &232486706
 Transform:
@@ -4912,6 +5119,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1109204460}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -5188,6 +5397,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1109204460}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -5425,6 +5636,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -5744,6 +5957,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 172108495}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -6047,6 +6262,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &283745286
 Transform:
@@ -6176,7 +6392,7 @@ MonoBehaviour:
   waitingTime: 5
   maxSquadsOnScreen: 2
   nextSquadDelay: 1
-  distance: 7
+  distance: 65
   currentSquadsOnScreen: 0
 --- !u!1 &289831665
 GameObject:
@@ -6226,6 +6442,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!1 &290769926
 GameObject:
@@ -6323,6 +6540,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 0
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -6476,6 +6695,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &300099349
 Transform:
@@ -6557,6 +6777,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &302479503
 Transform:
@@ -6660,6 +6881,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1775718028}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -6775,6 +6998,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -6863,6 +7088,133 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &311499221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311499222}
+  - component: {fileID: 311499223}
+  m_Layer: 0
+  m_Name: GetItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311499222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311499221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &311499223
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311499221}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 48618ea9ec584664daace7a8a7e60304, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.87
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &314886607
 GameObject:
   m_ObjectHideFlags: 0
@@ -6974,6 +7326,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1382092858}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -7158,6 +7512,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1067395789}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -7433,6 +7789,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 172108495}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -7589,6 +7947,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1576977812}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -7628,6 +7988,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &335004193
 Transform:
@@ -7724,6 +8085,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -7909,6 +8272,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 44798543}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -8799,6 +9164,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1365150180}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -9013,6 +9380,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1382092858}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -9272,6 +9641,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -9414,6 +9785,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1429553186}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -9517,6 +9890,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1958130522}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -9677,6 +10052,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1347761189}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -9892,6 +10269,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 32504153}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -10195,6 +10574,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1275718540}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -10528,6 +10909,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 0
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -10697,6 +11080,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1642793164}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -10882,6 +11267,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1109204460}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -11052,6 +11439,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1067395789}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -11179,6 +11568,7 @@ MonoBehaviour:
   isBot: 0
   isMainGun: 1
   target: {fileID: 0}
+  soundObject: {fileID: 749437392}
   bulletColor: {r: 1, g: 0, b: 0.81071854, a: 1}
 --- !u!1 &475326381
 GameObject:
@@ -11217,6 +11607,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1365150180}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -11824,6 +12216,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &556542998
 Transform:
@@ -11996,6 +12389,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 74615999}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -12098,6 +12493,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1874596115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -12279,6 +12676,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &590099572
 GameObject:
@@ -12361,6 +12759,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1777689205}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -12589,6 +12989,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &609138189
 Transform:
@@ -12794,6 +13195,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1115944732}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -12919,6 +13322,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 96106127}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -13353,6 +13758,133 @@ Transform:
   m_Father: {fileID: 1971270116}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &648343354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648343355}
+  - component: {fileID: 648343356}
+  m_Layer: 0
+  m_Name: PlayerShootX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &648343355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648343354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &648343356
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648343354}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3c45934146a7dbe40acdaa4164dc9e4a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 0.72
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &650068627
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,6 +13996,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -13708,6 +14242,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1296438719}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -13892,6 +14428,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 172108495}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -14029,6 +14567,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &676134962
 Transform:
@@ -14177,6 +14716,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1182040764}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -14350,6 +14891,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &710252250
 Transform:
@@ -14461,6 +15003,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 0
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -14613,6 +15157,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &723521788
 Transform:
@@ -14709,6 +15254,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -15128,6 +15675,133 @@ Transform:
   m_Father: {fileID: 1971270116}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &749437392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749437393}
+  - component: {fileID: 749437394}
+  m_Layer: 0
+  m_Name: PlayerShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749437393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749437392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &749437394
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749437392}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3c678c331984b174bb1ad4ad6d0c4287, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.593
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &749468747
 GameObject:
   m_ObjectHideFlags: 0
@@ -15224,6 +15898,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &751288619
 Transform:
@@ -15308,6 +15983,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -15607,6 +16284,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -15750,6 +16429,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &785646897
 Transform:
@@ -15846,6 +16526,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1874596115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -16043,6 +16725,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &808920307
 Transform:
@@ -16092,6 +16775,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &809815281
 Transform:
@@ -16144,6 +16828,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 635566840}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -16321,6 +17007,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &830926831
 Transform:
@@ -16432,6 +17119,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &845289943
 Transform:
@@ -16511,6 +17199,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &856527886
 Transform:
@@ -16607,6 +17296,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -16744,6 +17435,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &860584614
 Transform:
@@ -16855,6 +17547,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -16980,6 +17674,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1347761189}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -17080,6 +17776,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 96106127}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -17321,6 +18019,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &876566059
 GameObject:
@@ -17433,6 +18132,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1901625042}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -17675,6 +18376,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &889376928
 GameObject:
@@ -18060,6 +18762,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &914447389
 GameObject:
@@ -18095,6 +18798,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &914447391
 Transform:
@@ -18174,6 +18878,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &916854742
 Transform:
@@ -18262,6 +18967,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &921210371
 Transform:
@@ -18493,6 +19199,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -18730,6 +19438,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -18973,6 +19683,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &951049355
 Transform:
@@ -19022,6 +19733,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &951775600
 Transform:
@@ -19101,6 +19813,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &955914695
 Transform:
@@ -19150,6 +19863,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &955983534
 Transform:
@@ -19246,6 +19960,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1881788471}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -19383,6 +20099,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &961089370
 Transform:
@@ -19446,6 +20163,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &963475660
 GameObject:
@@ -19511,6 +20229,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &964782146
 Transform:
@@ -19696,6 +20415,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &985606149
 GameObject:
@@ -19764,6 +20484,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 172108495}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -20287,6 +21009,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1642793164}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -20417,6 +21141,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1382092858}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -20689,6 +21415,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 96106127}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -20829,6 +21557,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1444836076}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -20990,6 +21720,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1078437199
 Transform:
@@ -21196,6 +21927,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1874596115}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -21327,6 +22060,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1106183089
 GameObject:
@@ -21424,6 +22158,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1115944732}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -21777,6 +22513,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &1116283215
 Transform:
@@ -21859,6 +22596,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1109204460}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -21995,6 +22734,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -22256,6 +22997,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -22434,6 +23177,133 @@ Transform:
   m_Father: {fileID: 1576977814}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1170980449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170980450}
+  - component: {fileID: 1170980451}
+  m_Layer: 0
+  m_Name: Explosion3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170980450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170980449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1170980451
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170980449}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d3f8f4fd08661746b8df00d5d65a7e4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.638
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1173726235
 GameObject:
   m_ObjectHideFlags: 0
@@ -22604,6 +23474,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1182040764}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -22914,6 +23786,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1198866981
 GameObject:
@@ -23135,6 +24008,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1874596115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -23349,6 +24224,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1444836076}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -23579,6 +24456,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1296438719}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -23702,6 +24581,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 129946024}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -23902,6 +24783,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 616067557}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -24250,6 +25133,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &1244429172
 Transform:
@@ -24376,6 +25260,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 908139453}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -24543,6 +25429,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1271447994
 Transform:
@@ -24899,6 +25786,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -25190,6 +26079,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1429553186}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -25359,6 +26250,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 32504153}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -25463,6 +26356,133 @@ Transform:
   m_Father: {fileID: 1316486856}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1315229062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315229063}
+  - component: {fileID: 1315229064}
+  m_Layer: 0
+  m_Name: Explosion2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315229063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315229062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1315229064
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315229062}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ea9f4872c02229e448da392cbf873571, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.638
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1315237960
 GameObject:
   m_ObjectHideFlags: 0
@@ -25530,6 +26550,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 32504153}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -25549,6 +26571,133 @@ Transform:
   m_Father: {fileID: 1869218393}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1317064495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317064496}
+  - component: {fileID: 1317064497}
+  m_Layer: 0
+  m_Name: Level Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1317064496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317064495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1317064497
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317064495}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: da674dc803904e140acb4ffe804fbfc3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1317815592
 GameObject:
   m_ObjectHideFlags: 0
@@ -25630,6 +26779,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1006223577}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -25888,6 +27039,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -26028,6 +27181,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 44798543}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -26088,6 +27243,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 616067557}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -26203,6 +27360,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1344459352
 Transform:
@@ -26319,6 +27477,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1382092858}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -26379,6 +27539,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1881788471}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -26434,6 +27596,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1359092735
 Transform:
@@ -26497,6 +27660,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1365150180
 GameObject:
@@ -26828,6 +27992,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1376852831
 Transform:
@@ -27202,6 +28367,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1397068932
 Transform:
@@ -27523,6 +28689,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1115944732}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -27889,6 +29057,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 44798543}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -28029,6 +29199,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 419461328}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -28096,6 +29268,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1444313811
 GameObject:
@@ -28257,6 +29430,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1446545064
 GameObject:
@@ -28322,6 +29496,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1447402278
 Transform:
@@ -28499,6 +29674,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1457109188
 Transform:
@@ -28562,7 +29738,135 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
+--- !u!1 &1464988150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464988151}
+  - component: {fileID: 1464988152}
+  m_Layer: 0
+  m_Name: EnemyHurt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464988151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464988150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1464988152
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464988150}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1874e07675658f4488f3de471b8b3fd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1466183964
 GameObject:
   m_ObjectHideFlags: 0
@@ -28597,6 +29901,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1466183966
 Transform:
@@ -28676,6 +29981,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &1470100456
 Transform:
@@ -28725,6 +30031,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1481412072
 Transform:
@@ -28881,6 +30188,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1296438719}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -29048,6 +30357,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1506428102
 Transform:
@@ -29063,6 +30373,133 @@ Transform:
   m_Father: {fileID: 1757957113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1510183377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510183378}
+  - component: {fileID: 1510183379}
+  m_Layer: 0
+  m_Name: PlayerHurt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1510183378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510183377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1510183379
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510183377}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 886a2f2fdf83d494290360a1b4734dec, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1510833334
 GameObject:
   m_ObjectHideFlags: 0
@@ -29323,6 +30760,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1535397186
 Transform:
@@ -29419,6 +30857,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -29722,6 +31162,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1549786532
 Transform:
@@ -29774,6 +31215,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1275718540}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -29940,6 +31383,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 47095169}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -30158,6 +31603,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1901625042}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -30214,6 +31661,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 908139453}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -30406,6 +31855,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1775718028}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -30544,6 +31995,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1592112310
 Transform:
@@ -30596,6 +32048,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1006223577}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -30843,6 +32297,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 908139453}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -31152,6 +32608,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1618254740
 Transform:
@@ -31338,6 +32795,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -31476,6 +32935,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1638098441
 Transform:
@@ -31555,6 +33015,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1641425084
 Transform:
@@ -31725,6 +33186,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1777689205}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -31988,6 +33451,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &1685273494
 Transform:
@@ -32146,6 +33610,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1690619671
 Transform:
@@ -32257,6 +33722,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -32444,6 +33911,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1738799055}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -32544,6 +34013,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1275718540}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -32711,6 +34182,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1721680628
 Transform:
@@ -32957,6 +34429,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1435825151}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -33200,6 +34674,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 419461328}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -33541,6 +35017,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1614904395}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -33663,6 +35141,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1746079560
 Transform:
@@ -33774,6 +35253,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1444836076}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -33896,6 +35377,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1750583268
 Transform:
@@ -34022,6 +35504,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1971270115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -34345,6 +35829,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1275718540}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -34844,6 +36330,133 @@ Transform:
   m_Father: {fileID: 1775718029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1779551341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779551342}
+  - component: {fileID: 1779551343}
+  m_Layer: 0
+  m_Name: Explosion1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779551342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779551341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8009412}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1779551343
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779551341}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dce35f8f99ca10d46a953732f9608071, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.638
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1782135153
 GameObject:
   m_ObjectHideFlags: 0
@@ -34928,6 +36541,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1115944732}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -35135,6 +36750,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1738799055}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -35303,6 +36920,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1804460006
 Transform:
@@ -35461,6 +37079,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1971270115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -35628,6 +37248,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1812198343
 Transform:
@@ -35680,6 +37301,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1435825151}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -35780,6 +37403,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1006223577}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -36038,6 +37663,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1881788471}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -36235,6 +37862,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1833252900
 Transform:
@@ -36371,6 +37999,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1844468544
 Transform:
@@ -36467,6 +38096,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -36694,6 +38325,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1866612241
 Transform:
@@ -36790,6 +38422,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 96106127}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -37717,6 +39351,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -37857,6 +39493,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 129946024}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -37924,6 +39562,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &1909215748
 GameObject:
@@ -38081,6 +39720,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1429553186}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -38525,6 +40166,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1935160809
 Transform:
@@ -38604,6 +40246,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &1950013483
 Transform:
@@ -38794,6 +40437,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 1958130522}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -39227,6 +40872,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!4 &1981665883
 Transform:
@@ -39383,6 +41029,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 0}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -39534,6 +41182,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &2006044898
 GameObject:
@@ -39725,6 +41374,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &2033186882
 GameObject:
@@ -39807,6 +41457,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1365150180}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -39977,6 +41629,8 @@ MonoBehaviour:
   fireRateMax: 0
   hasWaypoints: 1
   waypoint: {fileID: 1971270115}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool: []
   isParent: 1
   squadMembers:
@@ -40173,6 +41827,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 2006044898}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -40513,6 +42169,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -40728,6 +42386,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 1971270115}
+  ExplosionObject: {fileID: 1779551341}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -40942,6 +42602,8 @@ MonoBehaviour:
   fireRateMax: 5
   hasWaypoints: 1
   waypoint: {fileID: 1296438719}
+  ExplosionObject: {fileID: 1170980449}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -41079,6 +42741,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &2086546434
 Transform:
@@ -41207,6 +42870,8 @@ MonoBehaviour:
   fireRateMax: 3
   hasWaypoints: 1
   waypoint: {fileID: 762947154}
+  ExplosionObject: {fileID: 1315229062}
+  hurtObject: {fileID: 1464988150}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -41555,6 +43220,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 0}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &2114227872
 Transform:
@@ -41618,6 +43284,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!1 &2121666678
 GameObject:
@@ -41804,6 +43471,8 @@ MonoBehaviour:
   fireRateMax: 2
   hasWaypoints: 1
   waypoint: {fileID: 940270296}
+  ExplosionObject: {fileID: 0}
+  hurtObject: {fileID: 0}
   lootPool:
   - {fileID: 1920278295}
   - {fileID: 1894867695}
@@ -42146,6 +43815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad2679814d24094c88c86c077f8dd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundObject: {fileID: 1510183377}
+  soundItemObject: {fileID: 311499221}
 --- !u!1 &2142829377
 GameObject:
   m_ObjectHideFlags: 0
@@ -42180,6 +43851,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  soundObject: {fileID: 117865640}
   bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 1}
 --- !u!4 &2142829379
 Transform:

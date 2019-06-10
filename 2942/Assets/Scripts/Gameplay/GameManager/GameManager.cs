@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     private RoundEnd roundEndMessage;
     private bool endRoundOnce;
     private bool startRoundOnce;
+    private bool playerDied;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
 
 
         PlayerController.onPlayerDeath += roundEnd;
+        PlayerController.onPlayerDeath += playerIsDead;
         currentSquadsOnScreen = 2;
 
         for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
@@ -82,8 +84,8 @@ public class GameManager : MonoBehaviour
         {
             if(!endRoundOnce)
             {
-                roundEnd();
                 endRoundOnce = true;
+                roundEnd();
             }
             waitingTimer += Time.deltaTime;
             checkNextScene();
@@ -161,9 +163,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void playerIsDead()
+    {
+        playerDied = true;
+    }
+
     private void roundEnd()
     {
         Debug.Log("Round ended");
+        endRoundOnce = true;
+        distance = 0;
         endRoundAnimator.SetBool("canSwitch", true);
         if (onRoundEnd != null)
         {
@@ -193,7 +202,7 @@ public class GameManager : MonoBehaviour
 
         //distanceTextGameObject.SetActive(false);
 
-        if(distance <= 0)
+        if(!playerDied)
         {
             roundEndMessage.display("You Passed the Level!", Color.green);
         }
@@ -214,5 +223,6 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         PlayerController.onPlayerDeath -= roundEnd;
+        PlayerController.onPlayerDeath -= playerIsDead;
     }
 }

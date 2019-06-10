@@ -9,10 +9,17 @@ public class LaserGun : MonoBehaviour
     public bool isBot;
     public bool isMainGun;
     public GameObject target;
+    public GameObject soundObject;
     public Color bulletColor;
 
     private bool isFiring;
     private float fireRateTimer;
+    private AudioSource sound;
+
+    private void Start()
+    {
+        sound = soundObject.GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (isFiring)
@@ -46,6 +53,7 @@ public class LaserGun : MonoBehaviour
             }
 
             bullet.GetComponent<SpriteRenderer>().material.color = bulletColor;
+            sound.Play();
         }
     }
 }

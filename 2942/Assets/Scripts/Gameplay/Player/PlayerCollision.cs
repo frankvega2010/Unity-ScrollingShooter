@@ -9,6 +9,17 @@ public class PlayerCollision : MonoBehaviour
     public static onAction onEnergyCollected;
     public static onAction onRocketCollected;
 
+    public GameObject soundObject;
+    public GameObject soundItemObject;
+
+    private AudioSource sound;
+    private AudioSource soundItem;
+    private void Start()
+    {
+        sound = soundObject.GetComponent<AudioSource>();
+        soundItem = soundItemObject.GetComponent<AudioSource>();
+    }
+
     private bool isPlayerBeingTarget(Bullet currentBullet)
     {
         if (currentBullet.target != null)
@@ -28,6 +39,7 @@ public class PlayerCollision : MonoBehaviour
             case "enemy":
                 if(onEnemyHit != null)
                 {
+                    sound.Play();
                     onEnemyHit();
                 }
                 break;
@@ -35,6 +47,7 @@ public class PlayerCollision : MonoBehaviour
                 Bullet currentBullet = collision.gameObject.GetComponent<Bullet>();
                 if (isPlayerBeingTarget(currentBullet))
                 {
+                    sound.Play();
                     if (onEnemyHit != null)
                     {
                         onEnemyHit();
@@ -48,6 +61,7 @@ public class PlayerCollision : MonoBehaviour
                     case "Energy":
                         if (onEnergyCollected != null)
                         {
+                            soundItem.Play();
                             onEnergyCollected();
                             Destroy(collision.gameObject);
                         }
@@ -55,6 +69,7 @@ public class PlayerCollision : MonoBehaviour
                     case "Rocket":
                         if (onRocketCollected != null)
                         {
+                            soundItem.Play();
                             onRocketCollected();
                             Destroy(collision.gameObject);
                         }

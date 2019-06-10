@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     public float fireRateMax;
     public bool hasWaypoints;
     public GameObject waypoint;
+    public GameObject ExplosionObject;
+    public GameObject hurtObject;
     public List<GameObject> lootPool;
 
     [Header("Squad")]
@@ -32,6 +34,8 @@ public class Enemy : MonoBehaviour
     private LaserGun enemyLaserGun;
     private Animator animator;
     private SpriteRenderer enemyRenderer;
+    private AudioSource explosionSound;
+    private AudioSource hurtSound;
     private float fireRate;
     private float fireRateTimer;
     private bool resetFireRateOnce;
@@ -43,6 +47,8 @@ public class Enemy : MonoBehaviour
             animator = GetComponent<Animator>();
             enemyRenderer = GetComponent<SpriteRenderer>();
             enemyLaserGun = LaserGun.GetComponent<LaserGun>();
+            explosionSound = ExplosionObject.GetComponent<AudioSource>();
+            hurtSound = hurtObject.GetComponent<AudioSource>();
         }
     }
 
@@ -115,6 +121,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("isDead", true);
         Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
+        //explosionSound.Play();
     }
 
     private void move()
@@ -162,6 +169,8 @@ public class Enemy : MonoBehaviour
                 animator.SetBool("isDead", true);
                 Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 7);
             }
+
+            explosionSound.Play();
         }
     }
 
@@ -246,16 +255,19 @@ public class Enemy : MonoBehaviour
                 Bullet currentBullet = collision.gameObject.GetComponent<Bullet>();
                 if(isEnemyBeingTarget(currentBullet))
                 {
+                    hurtSound.Play();
                     hitEnemy();
                 }
                 break;
             case "homingbullet":
                 if (collision.gameObject.GetComponent<HomingMissile>().target == gameObject)
                 {
+                    hurtSound.Play();
                     hitEnemy(999);
                 }
                 break;
             case "Player":
+                hurtSound.Play();
                 hitEnemy();
                 break;
             case "item":

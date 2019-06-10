@@ -6,12 +6,15 @@ public class FirestormX : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject missileInstance;
+    public GameObject soundObject;
 
     public List<GameObject> enemyShips;
     private GameManager gameManager;
+    private AudioSource sound;
     private void Start()
     {
         gameManager = GameManager.GetComponent<GameManager>();
+        sound = soundObject.GetComponent<AudioSource>();
     }
 
     public void Shoot()
@@ -42,6 +45,7 @@ public class FirestormX : MonoBehaviour
             bullet.transform.position = GetComponent<Transform>().position;
             bullet.GetComponent<HomingMissile>().target = enemy;
             bullet.SetActive(true);
+            sound.Play();
         }
     }
 }
