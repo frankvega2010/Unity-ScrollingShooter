@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -12,8 +13,11 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemySquads;
     public GameObject distanceTextGameObject;
     public GameObject roundEndUI;
-    
+    public GameObject startRoundCanvas;
+    public GameObject endRoundCanvas;
+
     //public GameObject upgradesIcons;
+    public float roundStartCountdown;
     public string nextSceneName;
     public float waitingTime;
     public int maxSquadsOnScreen;
@@ -21,13 +25,17 @@ public class GameManager : MonoBehaviour
     public float distance;
 
     private float waitingTimer;
+    private float roundStartTimer;
     public int currentSquadsOnScreen;
     private PlayerController playerController;
     private DisplayNumbers distanceText;
-    
+
     //private DisplayUpgrades upgradesDisplay;
+    private Animator startRoundAnimator;
+    private Animator endRoundAnimator;
     private RoundEnd roundEndMessage;
     private bool endRoundOnce;
+    private bool startRoundOnce;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +55,12 @@ public class GameManager : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         distanceText = distanceTextGameObject.GetComponent<DisplayNumbers>();
         roundEndMessage = roundEndUI.GetComponent<RoundEnd>();
-        
+        startRoundAnimator = startRoundCanvas.GetComponent<Animator>();
+        endRoundAnimator = endRoundCanvas.GetComponent<Animator>();
+
+
         PlayerController.onPlayerDeath += roundEnd;
+        currentSquadsOnScreen = 2;
 
         for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
         {
@@ -59,6 +71,8 @@ public class GameManager : MonoBehaviour
                 currentSquadsOnScreen++;
             }
         }
+
+
     }
 
     // Update is called once per frame
@@ -78,6 +92,22 @@ public class GameManager : MonoBehaviour
         {
             distance -= Time.deltaTime;
             distanceText.number = distance;
+            if (!startRoundOnce)
+            {
+                roundStartTimer += Time.deltaTime;
+            } 
+
+            if(roundStartTimer >= roundStartCountdown)
+            {
+                if(!startRoundOnce)
+                {
+                    currentSquadsOnScreen = 0;
+                    startRoundAnimator.SetBool("canSwitch", true);
+                    spawnNextSquad();
+                    startRoundOnce = true;
+                }
+                
+            }
         }
 
     }
@@ -134,7 +164,8 @@ public class GameManager : MonoBehaviour
     private void roundEnd()
     {
         Debug.Log("Round ended");
-        if(onRoundEnd != null)
+        endRoundAnimator.SetBool("canSwitch", true);
+        if (onRoundEnd != null)
         {
             onRoundEnd();
         }
@@ -160,7 +191,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        distanceTextGameObject.SetActive(false);
+        //distanceTextGameObject.SetActive(false);
 
         if(distance <= 0)
         {
