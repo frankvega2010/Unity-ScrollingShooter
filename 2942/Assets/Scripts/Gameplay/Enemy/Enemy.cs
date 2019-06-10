@@ -160,7 +160,7 @@ public class Enemy : MonoBehaviour
             if(!isParent)
             {
                 animator.SetBool("isDead", true);
-                Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 4);
+                Destroy(this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 7);
             }
         }
     }
