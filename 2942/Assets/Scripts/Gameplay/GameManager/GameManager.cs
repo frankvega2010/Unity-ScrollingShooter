@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public float distance;
 
     private float waitingTimer;
-    private int currentSquadsOnScreen;
+    public int currentSquadsOnScreen;
     private PlayerController playerController;
     private DisplayNumbers distanceText;
     //private DisplayUpgrades upgradesDisplay;
@@ -46,6 +46,16 @@ public class GameManager : MonoBehaviour
         roundEndMessage = roundEndUI.GetComponent<RoundEnd>();
         
         PlayerController.onPlayerDeath += roundEnd;
+
+        for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
+        {
+            if (enemySquads[i] != null && currentSquadsOnScreen < maxSquadsOnScreen)
+            {
+                enemySquads[i].SetActive(true);
+                enemySquads[i].GetComponent<Enemy>().activateWaypoint();
+                currentSquadsOnScreen++;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -67,15 +77,6 @@ public class GameManager : MonoBehaviour
             distanceText.number = distance;
         }
 
-        for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
-        {
-            if (enemySquads[i] != null && currentSquadsOnScreen < maxSquadsOnScreen)
-            {
-                enemySquads[i].SetActive(true);
-                enemySquads[i].GetComponent<Enemy>().activateWaypoint();
-                currentSquadsOnScreen++;
-            }
-        }
     }
 
     private void addPointsToPlayer(GameObject enemy)
@@ -105,6 +106,16 @@ public class GameManager : MonoBehaviour
                 }
             }
             
+        }
+
+        for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
+        {
+            if (enemySquads[i] != null && !enemySquads[i].activeSelf && currentSquadsOnScreen < maxSquadsOnScreen)
+            {
+                enemySquads[i].SetActive(true);
+                enemySquads[i].GetComponent<Enemy>().activateWaypoint();
+                currentSquadsOnScreen++;
+            }
         }
     }
 
