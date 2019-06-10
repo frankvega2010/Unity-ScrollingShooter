@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
             for (int f= 0; f < enemySquads[i].GetComponent<Enemy>().squadMembers.Count; f++)
             {
                 enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDeath += deleteEnemyFromSquad;
+                enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDestroyed += deleteEnemyFromSquad;
                 enemySquads[i].GetComponent<Enemy>().squadMembers[f].GetComponent<Enemy>().onEnemyDeath += addPointsToPlayer;
             }
             

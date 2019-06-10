@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public delegate void onEnemyAction(GameObject Enemy);
     public onEnemyAction onEnemyDeath;
+    public onEnemyAction onEnemyDestroyed;
 
     public enum enemyStates
     {
@@ -269,6 +270,10 @@ public class Enemy : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "bounds":
+                if(onEnemyDestroyed != null)
+                {
+                    onEnemyDestroyed(this.gameObject);
+                }
                 Destroy(this.gameObject);
                 break;
             default:
