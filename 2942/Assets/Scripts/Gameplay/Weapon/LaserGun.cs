@@ -9,6 +9,7 @@ public class LaserGun : MonoBehaviour
     public bool isBot;
     public bool isMainGun;
     public GameObject target;
+    public Color bulletColor;
 
     private bool isFiring;
     private float fireRateTimer;
@@ -43,6 +44,8 @@ public class LaserGun : MonoBehaviour
                     bulletComponent.target = target;
                 }
             }
+
+            bullet.GetComponent<SpriteRenderer>().material.color = bulletColor;
         }
     }
 }

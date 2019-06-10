@@ -146,6 +146,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &11385518
 Transform:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 0}
 --- !u!1 &77601791
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +244,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &77601793
 Transform:
   m_ObjectHideFlags: 0
@@ -334,6 +337,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 1, g: 0.91871744, b: 0.19339621, a: 1}
 --- !u!1 &111367651
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +876,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &170864154
 Transform:
   m_ObjectHideFlags: 0
@@ -966,6 +971,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &184051398
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,6 +1020,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &202821019
 Transform:
   m_ObjectHideFlags: 0
@@ -1228,6 +1235,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &233741762
 Transform:
   m_ObjectHideFlags: 0
@@ -2559,6 +2567,7 @@ MonoBehaviour:
   isBot: 0
   isMainGun: 1
   target: {fileID: 0}
+  bulletColor: {r: 1, g: 0, b: 0.81071854, a: 1}
 --- !u!1 &478555107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +2955,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &505051577
 Transform:
   m_ObjectHideFlags: 0
@@ -3424,6 +3434,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &622326441
 Transform:
   m_ObjectHideFlags: 0
@@ -3946,6 +3957,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &764183047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,6 +4132,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &787746348
 Transform:
   m_ObjectHideFlags: 0
@@ -5065,6 +5078,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &998648586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,6 +5588,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 1, g: 0.91764706, b: 0.19215687, a: 0}
 --- !u!1 &1103138506
 GameObject:
   m_ObjectHideFlags: 0
@@ -7771,6 +7786,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1526945259
 GameObject:
   m_ObjectHideFlags: 0
@@ -8127,6 +8143,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1555631770
 Transform:
   m_ObjectHideFlags: 0
@@ -8373,6 +8390,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1597040563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,6 +9052,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1808311420
 Transform:
   m_ObjectHideFlags: 0
@@ -10221,6 +10240,7 @@ MonoBehaviour:
   isBot: 1
   isMainGun: 0
   target: {fileID: 2141474162}
+  bulletColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &2091949549
 Transform:
   m_ObjectHideFlags: 0
