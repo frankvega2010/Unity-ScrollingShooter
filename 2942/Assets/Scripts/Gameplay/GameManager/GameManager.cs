@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public string nextSceneName;
     public float waitingTime;
     public int maxSquadsOnScreen;
+    public float nextSquadDelay;
     public float distance;
 
     private float waitingTimer;
@@ -101,13 +102,22 @@ public class GameManager : MonoBehaviour
                     {
                         Destroy(parentOfEnemy);
                         enemySquads[i] = null;
-                        currentSquadsOnScreen--;
+                        Invoke("substractCurrentSquadsOnScreen", nextSquadDelay);
                     }
                 }
             }
             
-        }
+        }  
+    }
 
+    private void substractCurrentSquadsOnScreen()
+    {
+        currentSquadsOnScreen--;
+        spawnNextSquad();
+    }
+
+    private void spawnNextSquad()
+    {
         for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
         {
             if (enemySquads[i] != null && !enemySquads[i].activeSelf && currentSquadsOnScreen < maxSquadsOnScreen)
