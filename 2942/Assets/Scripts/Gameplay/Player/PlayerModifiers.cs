@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerModifiers : MonoBehaviour
 {
     public float energyDrainRate;
+    public float firestormXChargeRate;
     public float newPositionDifference;
     public int maxCannons;
     public int energyRecovery;

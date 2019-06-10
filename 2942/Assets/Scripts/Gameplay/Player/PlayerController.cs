@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private LaserGun laserGunTemplate;
     private FirestormX playerFirestormX;
     private float energyDrainTimer;
+    private float firestormXChargeTimer;
     private int spawnCount;
 
     private StatusBar energyStatusBar;
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         energyDrainTimer += Time.deltaTime;
+        firestormXChargeTimer += Time.deltaTime;
         energyStatusBar.value = playerStatus.energy;
         firestormXStatusBar.value = playerStatus.firestormXCharge;
 
@@ -104,6 +106,16 @@ public class PlayerController : MonoBehaviour
         {
             energyDrainTimer = 0;
             playerStatus.energy--;
+        }
+
+        if(firestormXChargeTimer >= playerModifiers.firestormXChargeRate)
+        {
+            playerStatus.firestormXCharge++;
+            if(playerStatus.firestormXCharge >= 100)
+            {
+                playerStatus.firestormXCharge = 100;
+            }
+            firestormXChargeTimer = 0;
         }
 
         if(playerStatus.energy <= 0)

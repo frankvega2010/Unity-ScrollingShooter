@@ -4490,6 +4490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyDrainRate: 2.5
+  firestormXChargeRate: 0.5
   newPositionDifference: 0.05
   maxCannons: 5
   energyRecovery: 2
