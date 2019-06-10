@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
         PlayerCollision.onEnergyCollected = RecoverEnergy;
         PlayerCollision.onRocketCollected = addCannon;
         GameManager.onRoundEnd += disableUI;
+        GameManager.onRoundEnd += disableCollision;
 
     }
 
@@ -234,10 +235,16 @@ public class PlayerController : MonoBehaviour
         FirestormXBar.SetActive(false);
     }
 
+    private void disableCollision()
+    {
+        Destroy(GetComponent<PlayerCollision>());
+    }
+
     private void OnDestroy()
     {
         PlayerCollision.onEnemyHit -= substractEnergy;
         PlayerCollision.onEnemyHit -= RemoveUpgrades;
         GameManager.onRoundEnd -= disableUI;
+        GameManager.onRoundEnd -= disableCollision;
     }
 }

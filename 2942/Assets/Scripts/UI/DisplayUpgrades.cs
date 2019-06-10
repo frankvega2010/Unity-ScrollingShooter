@@ -9,6 +9,11 @@ public class DisplayUpgrades : MonoBehaviour
     public List<GameObject> upgradesIcons;
     public GameObject sprite;
 
+    private void Start()
+    {
+        GameManager.onRoundEnd = hideUpgrades;
+    }
+
     private int upgradeLevel;
     public void addUpgradeIcon()
     {
@@ -37,6 +42,14 @@ public class DisplayUpgrades : MonoBehaviour
         for (int i = 0; i < upgradeLevel; i++)
         {
             upgradesIcons[i].transform.localPosition = sprite.transform.localPosition + new Vector3((distanceBetweenIcons * i), 0,0);
+        }
+    }
+
+    private void hideUpgrades()
+    {
+        for (int i = 0; i < upgradeLevel; i++)
+        {
+            upgradesIcons[i].SetActive(false);
         }
     }
 }
