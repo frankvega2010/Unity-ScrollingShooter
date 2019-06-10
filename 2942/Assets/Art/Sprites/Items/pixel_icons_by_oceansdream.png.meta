@@ -3,6 +3,7 @@ guid: cefdbd5b7dc3ad14c8beb0726a6c9b76
 TextureImporter:
   fileIDToRecycleName:
     21300000: rocket
+    21300002: Rocket_Launcher
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -93,13 +94,33 @@ TextureImporter:
         width: 11
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: dbff1d04cbb123e488184aeac03b9a22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Launcher
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2136cc6769289b84bad3f4de8120b841
       vertices: []
       indices: 
       edges: []

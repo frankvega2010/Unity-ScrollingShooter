@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public List<LaserGun> playerLaserGuns;
     public GameObject firestormX;
     public GameObject playerModifiersGameObject;
+    public GameObject upgradesIcons;
 
     [Header("Bars")]
     public GameObject EnergyBar;
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerModifiers playerModifiers;
     private PlayerStatus playerStatus;
+    private DisplayUpgrades upgradesDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         energyStatusBar = EnergyBar.GetComponent<StatusBar>();
         firestormXStatusBar = FirestormXBar.GetComponent<StatusBar>();
         playerStatus = playerStatusGameObject.GetComponent<PlayerStatus>();
+        upgradesDisplay = upgradesIcons.GetComponent<DisplayUpgrades>();
 
         newPositionDirection = 1;
         duplicateCount = 1;
@@ -136,6 +139,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
             ResetRocketPositions();
+            upgradesDisplay.resetUpgradesIcons();
         }
     }
 
@@ -193,6 +197,8 @@ public class PlayerController : MonoBehaviour
                     spawnCount = 0;
                 }
             }
+
+            upgradesDisplay.addUpgradeIcon();
         }
         
     }

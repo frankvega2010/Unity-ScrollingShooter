@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemySquads;
     public GameObject distanceTextGameObject;
     public GameObject roundEndUI;
+    //public GameObject upgradesIcons;
     public string nextSceneName;
     public float waitingTime;
     public int maxSquadsOnScreen;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     private int currentSquadsOnScreen;
     private PlayerController playerController;
     private DisplayNumbers distanceText;
+    //private DisplayUpgrades upgradesDisplay;
     private RoundEnd roundEndMessage;
     private bool endRoundOnce;
     // Start is called before the first frame update
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         distanceText = distanceTextGameObject.GetComponent<DisplayNumbers>();
         roundEndMessage = roundEndUI.GetComponent<RoundEnd>();
+        
         PlayerController.onPlayerDeath += roundEnd;
     }
 
