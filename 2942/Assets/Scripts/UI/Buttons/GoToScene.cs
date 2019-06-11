@@ -26,18 +26,11 @@ public class GoToScene : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
                 break;
             case "Menu":
-                if (isLevelRestartButton)
+                if (SceneManager.GetActiveScene().name == "GameOver" || SceneManager.GetActiveScene().name == "Level2")
                 {
-                    SceneManager.LoadScene(SaveLastLevel.Get().loadLevelName());
+                    BGMMenu.Get().playMenuMusic();
                 }
-                else
-                {
-                    if(SceneManager.GetActiveScene().name == "GameOver" || SceneManager.GetActiveScene().name == "Level2")
-                    {
-                        BGMMenu.Get().playMenuMusic();
-                    }
-                    SceneManager.LoadScene(sceneName);
-                }
+                SceneManager.LoadScene(sceneName);
                 break;
             case "Controls":
                 SceneManager.LoadScene(sceneName);
@@ -46,31 +39,16 @@ public class GoToScene : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
                 break;
             default:
-                SceneManager.LoadScene(sceneName);
+                if (isLevelRestartButton)
+                {
+                    SceneManager.LoadScene(SaveLastLevel.Get().loadLevelName());
+                }
+                else
+                {
+                    SceneManager.LoadScene(sceneName);
+                }
                 break;
         }
-
-
-        //if (sceneName == "Level1" || sceneName == "Level2")
-        //{
-        //    BGMMenu.Get().stopMenuMusic();
-        //    LoaderManager.Get().LoadScene(sceneName);
-        //    UILoadingScreen.Get().SetVisible(true);
-        //}
-        //else
-        //{
-        //    if(isLevelRestartButton)
-        //    {
-        //        SceneManager.LoadScene(SaveLastLevel.Get().loadLevelName());
-        //    }
-        //    else
-        //    {
-        //        SceneManager.LoadScene(sceneName);
-        //        BGMMenu.Get().stopMenuMusic();
-        //    }
-            
-        //}
-
     }
 
     public void QuitGame()
