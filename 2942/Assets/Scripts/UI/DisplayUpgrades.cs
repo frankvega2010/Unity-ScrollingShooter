@@ -18,7 +18,7 @@ public class DisplayUpgrades : MonoBehaviour
     public void addUpgradeIcon()
     {
         GameObject spriteInstance = Instantiate(sprite);
-        spriteInstance.transform.SetParent(gameObject.transform.parent);
+        spriteInstance.transform.SetParent(gameObject.transform.parent, false);
         spriteInstance.GetComponent<RectTransform>().localPosition = Vector3.zero;
         spriteInstance.SetActive(true);
         upgradesIcons.Add(spriteInstance);
@@ -42,6 +42,7 @@ public class DisplayUpgrades : MonoBehaviour
         for (int i = 0; i < upgradeLevel; i++)
         {
             upgradesIcons[i].transform.localPosition = sprite.transform.localPosition + new Vector3((distanceBetweenIcons * i), 0,0);
+            //upgradesIcons[i].set
         }
     }
 

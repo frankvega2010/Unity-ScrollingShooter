@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public GameObject startRoundCanvas;
     public GameObject endRoundCanvas;
 
-    //public GameObject upgradesIcons;
     public float roundStartCountdown;
     public string nextSceneName;
     public float waitingTime;
@@ -30,10 +29,10 @@ public class GameManager : MonoBehaviour
     private PlayerController playerController;
     private DisplayNumbers distanceText;
 
-    //private DisplayUpgrades upgradesDisplay;
     private Animator startRoundAnimator;
     private Animator endRoundAnimator;
     private RoundEnd roundEndMessage;
+    private SaveLastLevel saveLevelName;
     private bool endRoundOnce;
     private bool startRoundOnce;
     private bool playerDied;
@@ -58,6 +57,7 @@ public class GameManager : MonoBehaviour
         roundEndMessage = roundEndUI.GetComponent<RoundEnd>();
         startRoundAnimator = startRoundCanvas.GetComponent<Animator>();
         endRoundAnimator = endRoundCanvas.GetComponent<Animator>();
+        saveLevelName = SaveLastLevel.Get();
 
 
         PlayerController.onPlayerDeath += roundEnd;
@@ -210,13 +210,22 @@ public class GameManager : MonoBehaviour
         {
             roundEndMessage.display("You died!", Color.red);
         }
+
+        saveLevelName.saveLevelName(SceneManager.GetActiveScene().name);
     }
 
     private void checkNextScene()
     {
         if (waitingTimer >= waitingTime)
         {
-            SceneManager.LoadScene(nextSceneName);
+            if (!playerDied)
+            {
+                SceneManager.LoadScene(nextSceneName);
+            }
+            else
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 

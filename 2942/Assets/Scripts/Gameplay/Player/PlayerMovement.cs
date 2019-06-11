@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         float yAxis = Input.GetAxisRaw("Vertical");
 
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp(pos.x,0.02f,0.98f);
+        pos.x = Mathf.Clamp(pos.x,0.04f,0.96f);
         pos.y = Mathf.Clamp(pos.y, 0.08f, 0.92f);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
         
@@ -60,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void DisableMovement()
     {
-        enabled = false;
+        Destroy(this);
     }
 
     private void OnDestroy()
     {
-        GameManager.onRoundEnd -= DisableMovement;
+       GameManager.onRoundEnd -= DisableMovement;
     }
 }
