@@ -60,6 +60,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void DisableMovement()
     {
+        playerAnimator.SetBool("movingRight", false);
+        playerAnimator.SetBool("movingLeft", false);
+        playerAnimator.SetBool("isDead", true);
         Destroy(this);
     }
 

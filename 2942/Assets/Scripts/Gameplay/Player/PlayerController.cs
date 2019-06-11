@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public GameObject playerModifiersGameObject;
     public GameObject upgradesIcons;
     public GameObject pointsUI;
+    public GameObject deathSoundObject;
 
     [Header("Bars")]
     public GameObject EnergyBar;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     
     private LaserGun laserGunTemplate;
     private FirestormX playerFirestormX;
+    private AudioSource deathSound;
     private float energyDrainTimer;
     private float firestormXChargeTimer;
     private int spawnCount;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private PlayerStatus playerStatus;
     private DisplayUpgrades upgradesDisplay;
     private DisplayNumbers pointsDisplay;
+    private bool dieOnce;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
         firestormXStatusBar = FirestormXBar.GetComponent<StatusBar>();
         playerStatus = playerStatusGameObject.GetComponent<PlayerStatus>();
         upgradesDisplay = upgradesIcons.GetComponent<DisplayUpgrades>();
+        deathSound = deathSoundObject.GetComponent<AudioSource>();
 
         newPositionDirection = 1;
         duplicateCount = 1;
@@ -179,7 +183,14 @@ public class PlayerController : MonoBehaviour
 
     private void playerDie()
     {
-        if(onPlayerDeath != null)
+        if(!dieOnce)
+        {
+            deathSound.Play();
+            playerLaserGuns.Clear();
+            dieOnce = true;
+        }
+        
+        if (onPlayerDeath != null)
         {
             onPlayerDeath();
         }
