@@ -69,5 +69,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnDestroy()
     {
        GameManager.onRoundEnd -= DisableMovement;
+       PlayerController.onPlayerDeath -= DisableMovement;
     }
 }
