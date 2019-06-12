@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static onGameAction onRoundEnd;
 
     public GameObject player;
+    public GameObject squadSpawnerGameObject;
     public GameObject[] enemySquads;
     public GameObject distanceTextGameObject;
     public GameObject roundEndUI;
@@ -33,12 +34,16 @@ public class GameManager : MonoBehaviour
     private Animator endRoundAnimator;
     private RoundEnd roundEndMessage;
     private SaveLastLevel saveLevelName;
+    private SquadSpawner squadSpawner;
     private bool endRoundOnce;
     private bool startRoundOnce;
     private bool playerDied;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        squadSpawner = squadSpawnerGameObject.GetComponent<SquadSpawner>();
+        squadSpawner.addSquadToLevelSquads();
+
         for (int i = 0; i < enemySquads.Length; i++)
         {
             enemySquads[i].GetComponent<Enemy>().deActivateWaypoint();
@@ -64,7 +69,7 @@ public class GameManager : MonoBehaviour
         PlayerController.onPlayerDeath += playerIsDead;
         currentSquadsOnScreen = 2;
 
-        for (int i = 0; i < enemySquads.Length; i++) //TEST, AVOID REPETEAING THE FOR EVERY FRAME.
+        for (int i = 0; i < enemySquads.Length; i++)
         {
             if (enemySquads[i] != null && currentSquadsOnScreen < maxSquadsOnScreen)
             {
@@ -78,7 +83,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(distance <= 0)
         {
