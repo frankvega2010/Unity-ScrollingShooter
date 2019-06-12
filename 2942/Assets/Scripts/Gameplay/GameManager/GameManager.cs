@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Cursor.visible = false;
         squadSpawner = squadSpawnerGameObject.GetComponent<SquadSpawner>();
         squadSpawner.addSquadToLevelSquads();
 
@@ -236,6 +237,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        Cursor.visible = true;
         PlayerController.onPlayerDeath -= roundEnd;
         PlayerController.onPlayerDeath -= playerIsDead;
     }
