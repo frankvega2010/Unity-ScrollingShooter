@@ -12507,7 +12507,7 @@ MonoBehaviour:
   firestormXChargeRate: 0.2
   newPositionDifference: 0.05
   maxCannons: 5
-  energyRecovery: 3
+  energyRecovery: 4
   receivedDamage: 5
 --- !u!1 &1039975073
 GameObject:

@@ -226,6 +226,13 @@ public class GameManager : MonoBehaviour
         {
             if (!playerDied)
             {
+                if (SceneManager.GetActiveScene().name == "Level2")
+                {
+                    if(BGMMenu.Get())
+                    {
+                        BGMMenu.Get().playMenuMusic();
+                    }
+                }
                 SceneManager.LoadScene(nextSceneName);
             }
             else

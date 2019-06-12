@@ -26,7 +26,7 @@ public class UIGoToScene : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
                 break;
             case "Menu":
-                if (SceneManager.GetActiveScene().name == "GameOver" || SceneManager.GetActiveScene().name == "Level2")
+                if (SceneManager.GetActiveScene().name == "GameOver")
                 {
                     BGMMenu.Get().playMenuMusic();
                 }

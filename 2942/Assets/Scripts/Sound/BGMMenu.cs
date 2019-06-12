@@ -18,10 +18,7 @@ public class BGMMenu : MonoBehaviourSingleton<BGMMenu>
 
     public void playMenuMusic()
     {
-        if (!song.isPlaying)
-        {
-            song.Play();
-        }
+        song.Play();
     }
 
     public void stopMenuMusic()
