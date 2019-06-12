@@ -6410,7 +6410,7 @@ MonoBehaviour:
   waitingTime: 5
   maxSquadsOnScreen: 2
   nextSquadDelay: 1
-  distance: 65
+  distance: 6
   currentSquadsOnScreen: 0
 --- !u!1 &289831665
 GameObject:

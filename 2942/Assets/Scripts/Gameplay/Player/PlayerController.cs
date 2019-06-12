@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         PlayerCollision.onRocketCollected = addCannon;
         GameManager.onRoundEnd += disableUI;
         GameManager.onRoundEnd += disableCollision;
+        GameManager.onRoundEnd += disableGuns;
 
     }
 
@@ -186,7 +187,7 @@ public class PlayerController : MonoBehaviour
         if(!dieOnce)
         {
             deathSound.Play();
-            playerLaserGuns.Clear();
+            disableGuns();
             dieOnce = true;
         }
         
@@ -246,6 +247,12 @@ public class PlayerController : MonoBehaviour
         FirestormXBar.SetActive(false);
     }
 
+    private void disableGuns()
+    {
+        playerLaserGuns.Clear();
+        Destroy(playerFirestormX);
+    }
+
     private void disableCollision()
     {
         Destroy(GetComponent<PlayerCollision>());
@@ -257,5 +264,6 @@ public class PlayerController : MonoBehaviour
         PlayerCollision.onEnemyHit -= RemoveUpgrades;
         GameManager.onRoundEnd -= disableUI;
         GameManager.onRoundEnd -= disableCollision;
+        GameManager.onRoundEnd -= disableGuns;
     }
 }

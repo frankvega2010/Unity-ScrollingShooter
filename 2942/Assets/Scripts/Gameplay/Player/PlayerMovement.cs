@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        PlayerController.onPlayerDeath += playDestroyAnimation;
         PlayerController.onPlayerDeath += DisableMovement;
         GameManager.onRoundEnd += DisableMovement;
     }
@@ -62,13 +63,18 @@ public class PlayerMovement : MonoBehaviour
     {
         playerAnimator.SetBool("movingRight", false);
         playerAnimator.SetBool("movingLeft", false);
-        playerAnimator.SetBool("isDead", true);
         Destroy(this);
+    }
+
+    private void playDestroyAnimation()
+    {
+        playerAnimator.SetBool("isDead", true);
     }
 
     private void OnDestroy()
     {
-       GameManager.onRoundEnd -= DisableMovement;
-       PlayerController.onPlayerDeath -= DisableMovement;
+        GameManager.onRoundEnd -= DisableMovement;
+        PlayerController.onPlayerDeath -= playDestroyAnimation;
+        PlayerController.onPlayerDeath -= DisableMovement;
     }
 }
