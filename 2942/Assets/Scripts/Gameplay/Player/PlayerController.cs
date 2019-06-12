@@ -35,13 +35,13 @@ public class PlayerController : MonoBehaviour
     private float firestormXChargeTimer;
     private int spawnCount;
 
-    private StatusBar energyStatusBar;
-    private StatusBar firestormXStatusBar;
+    private UIStatusBar energyStatusBar;
+    private UIStatusBar firestormXStatusBar;
 
     private PlayerModifiers playerModifiers;
     private PlayerStatus playerStatus;
-    private DisplayUpgrades upgradesDisplay;
-    private DisplayNumbers pointsDisplay;
+    private UIDisplayUpgrades upgradesDisplay;
+    private UIDisplayNumbers pointsDisplay;
     private bool dieOnce;
     // Start is called before the first frame update
     void Start()
@@ -56,17 +56,17 @@ public class PlayerController : MonoBehaviour
 
         playerFirestormX = firestormX.GetComponent<FirestormX>();
         playerRenderer = GetComponent<SpriteRenderer>();
-        energyStatusBar = EnergyBar.GetComponent<StatusBar>();
-        firestormXStatusBar = FirestormXBar.GetComponent<StatusBar>();
+        energyStatusBar = EnergyBar.GetComponent<UIStatusBar>();
+        firestormXStatusBar = FirestormXBar.GetComponent<UIStatusBar>();
         playerStatus = playerStatusGameObject.GetComponent<PlayerStatus>();
-        upgradesDisplay = upgradesIcons.GetComponent<DisplayUpgrades>();
+        upgradesDisplay = upgradesIcons.GetComponent<UIDisplayUpgrades>();
         deathSound = deathSoundObject.GetComponent<AudioSource>();
 
         newPositionDirection = 1;
         duplicateCount = 1;
         spawnCount = 0;
         constantNewPositionDifference = playerModifiers.newPositionDifference;
-        pointsDisplay = pointsUI.GetComponent<DisplayNumbers>();
+        pointsDisplay = pointsUI.GetComponent<UIDisplayNumbers>();
 
         PlayerCollision.onEnemyHit += substractEnergy;
         PlayerCollision.onEnemyHit += RemoveUpgrades;

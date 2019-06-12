@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatusBar : MonoBehaviour
+public class UIStatusBar : MonoBehaviour
 {
     public int value;
 

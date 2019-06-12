@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RoundEnd : MonoBehaviour
+public class UIRoundEnd : MonoBehaviour
 {
     public GameObject blackscreen;
     public GameObject roundMessage;

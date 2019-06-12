@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToScene : MonoBehaviour
+public class UIGoToScene : MonoBehaviour
 {
     public string sceneName;
     public bool isLevelRestartButton;

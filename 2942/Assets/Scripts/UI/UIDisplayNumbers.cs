@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayNumbers : MonoBehaviour
+public class UIDisplayNumbers : MonoBehaviour
 {
     public string textToDisplay;
     public float number;

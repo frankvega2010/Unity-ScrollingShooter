@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayUpgrades : MonoBehaviour
+public class UIDisplayUpgrades : MonoBehaviour
 {
     public float distanceBetweenIcons;
     public List<GameObject> upgradesIcons;

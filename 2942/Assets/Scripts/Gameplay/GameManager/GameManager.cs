@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
     private float roundStartTimer;
     public int currentSquadsOnScreen;
     private PlayerController playerController;
-    private DisplayNumbers distanceText;
+    private UIDisplayNumbers distanceText;
 
     private Animator startRoundAnimator;
     private Animator endRoundAnimator;
-    private RoundEnd roundEndMessage;
+    private UIRoundEnd roundEndMessage;
     private SaveLastLevel saveLevelName;
     private SquadSpawner squadSpawner;
     private bool endRoundOnce;
@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
         }
 
         playerController = player.GetComponent<PlayerController>();
-        distanceText = distanceTextGameObject.GetComponent<DisplayNumbers>();
-        roundEndMessage = roundEndUI.GetComponent<RoundEnd>();
+        distanceText = distanceTextGameObject.GetComponent<UIDisplayNumbers>();
+        roundEndMessage = roundEndUI.GetComponent<UIRoundEnd>();
         startRoundAnimator = startRoundCanvas.GetComponent<Animator>();
         endRoundAnimator = endRoundCanvas.GetComponent<Animator>();
         saveLevelName = SaveLastLevel.Get();
