@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class BGMMenu : MonoBehaviourSingleton<BGMMenu>
+public class PlaySoundOnStart : MonoBehaviour
 {
     public AudioSource song;
 
     private void Start()
     {
         song = GetComponent<AudioSource>();
-        if (SceneManager.GetActiveScene().name != "GameOver")
-        {
-            song.Play();
-        }
+        song.Play();
     }
 
     public void playMenuMusic()
