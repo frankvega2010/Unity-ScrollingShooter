@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1040484490}
   - component: {fileID: 1040484489}
   m_Layer: 0
-  m_Name: Credits (2)
+  m_Name: Controls3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 1171629867}
   - component: {fileID: 1171629866}
   m_Layer: 0
-  m_Name: Credits
+  m_Name: Controls1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,10 +1028,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.63
   m_Text: 'Movement
 
-    WASD or Arrow keys'
+    Arrow keys'
 --- !u!222 &1171629868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1286,6 +1286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menu
+  isLevelRestartButton: 0
 --- !u!1 &1618221016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1580,7 @@ GameObject:
   - component: {fileID: 1939978813}
   - component: {fileID: 1939978812}
   m_Layer: 0
-  m_Name: Credits (1)
+  m_Name: Controls2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
